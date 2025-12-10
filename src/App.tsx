@@ -407,7 +407,7 @@ const geologicalData: GeologicalNode[] = [
                 englishName: 'Cambrian Explosion',
                 time: '~538.8 Ma',
                 image: 'Cambrian_Explosion.jpg',
-                desc: '生命演化史上的里程碑，絕大多數現代動物門類在極短時間內出現，生態系統複雜度急劇上升。'
+                desc: '寒武紀大爆發的特點是各種有礦化組織可形成實體化石的多細胞生物的物種多樣性大大增加，化石記錄顯示絕大多數現生動物的門都在這一時期演化出現了，在世界各地發現的化石群都共同印證了這一生命史上的壯觀景象，例如在加拿大的伯吉斯頁岩和在中國的澄江生物群、清江生物群等。系統複雜度急劇上升。'
               }
             ]
           }
