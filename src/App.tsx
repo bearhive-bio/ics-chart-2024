@@ -9,7 +9,6 @@ import {
   ArrowLeft, 
   ArrowRight, 
   CornerUpLeft, 
-  Zap, 
   Sparkles
 } from 'lucide-react';
 
