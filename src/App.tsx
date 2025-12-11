@@ -621,7 +621,7 @@ const DetailPanel: React.FC<DetailPanelProps> = ({ unit, onClose, onNavigate }) 
   return (
     <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4" onClick={onClose}>
       <div 
-        className="bg-white rounded-xl shadow-2xl max-w-4xl w-full overflow-hidden animate-in fade-in zoom-in-95 duration-200 flex flex-col max-h-[90vh]"
+        className="bg-white rounded-xl shadow-2xl max-w-7xl w-full overflow-hidden animate-in fade-in zoom-in-95 duration-200 flex flex-col max-h-[90vh]"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="bg-gray-100 border-b border-gray-200 p-2 flex justify-between items-center flex-shrink-0">
@@ -664,7 +664,7 @@ const DetailPanel: React.FC<DetailPanelProps> = ({ unit, onClose, onNavigate }) 
         </div>
 
         <div className="flex flex-col md:flex-row flex-1 overflow-hidden">
-          <div className="w-full md:w-1/2 h-48 md:h-auto relative bg-gray-100 flex-shrink-0">
+          <div className="w-full md:w-2/3 h-64 md:h-auto relative bg-gray-100 flex-shrink-0">
             <SmartImage 
               src={unit.image} 
               alt={unit.name} 
@@ -674,7 +674,7 @@ const DetailPanel: React.FC<DetailPanelProps> = ({ unit, onClose, onNavigate }) 
             />
           </div>
 
-          <div className="w-full md:w-1/2 flex flex-col h-full overflow-hidden bg-white">
+          <div className="w-full md:w-1/3 flex flex-col h-full overflow-hidden bg-white">
             <div className={`p-6 border-b ${headerBg} ${headerBorder}`}>
               <div>
                   <h2 className={`text-3xl font-bold ${titleColor}`}>
