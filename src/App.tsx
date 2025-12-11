@@ -699,7 +699,7 @@ const DetailPanel: React.FC<DetailPanelProps> = ({ unit, onClose, onNavigate }) 
                   <BookOpen size={16}/> 
                   {(isExtinction || isExplosion) ? '事件描述' : '時期特徵'}
                 </h3>
-                <div className="text-gray-700 leading-relaxed text-lg max-h-[400px] overflow-y-auto pr-4">
+                <div className="text-gray-700 leading-relaxed text-lg max-h-[200px] overflow-y-auto pr-4">
                   {(isExtinction || isExplosion) ? unit.desc : (unit.description || "暫無詳細描述。")}
                 </div>
               </div>
