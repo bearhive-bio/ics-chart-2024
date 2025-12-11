@@ -400,14 +400,24 @@ const geologicalData: GeologicalNode[] = [
             description: '寒武紀大爆發，大多數動物門類出現。',
             image: 'Cambrian.jpg',
             children: [
-               {
+              {
                 type: 'explosion',
                 id: 'cambrian_explosion',
                 name: '寒武紀大爆發 (生命綻放)',
                 englishName: 'Cambrian Explosion',
                 time: '~538.8 Ma',
                 image: 'Cambrian_Explosion.jpg',
-                desc: '大約 5.4 億年前，地球海洋上演了一場名為「寒武紀大爆發」的生物狂歡。在相對極短的時間內，生命從簡單柔軟的形態，迅速演化出擁有堅硬外殼與骨骼（礦化組織）的複雜物種。這不僅大幅提升了生物多樣性，更奠定了幾乎所有現代動物——包括人類——的身體基本藍圖（門）。透過加拿大伯吉斯頁岩與中國澄江生物群的珍貴化石，我們得以見證這段「演化創意大爆發」的壯麗時刻，它是地球生命最關鍵的轉捩點。'
+                // 修改 desc 如下：
+                desc: (
+                  <>
+                    <span className="font-bold text-gray-900 block mb-4 text-xl">
+                    【寒武紀大爆發：生命史上的演化煙火秀】
+                    </span>
+                    <span className="block leading-relaxed">
+                    大約 5.4 億年前，地球海洋上演了一場名為「寒武紀大爆發」的生物狂歡。在相對極短的時間內，生命從簡單柔軟的形態，迅速演化出擁有堅硬外殼與骨骼（礦化組織）的複雜物種。這不僅大幅提升了生物多樣性，更奠定了幾乎所有現代動物——包括人類——的身體基本藍圖（門）。透過加拿大伯吉斯頁岩與中國澄江生物群的珍貴化石，我們得以見證這段「演化創意大爆發」的壯麗時刻，它是地球生命最關鍵的轉捩點。
+                    </span>
+                  </>
+                )
               }
             ]
           }
@@ -689,9 +699,9 @@ const DetailPanel: React.FC<DetailPanelProps> = ({ unit, onClose, onNavigate }) 
                   <BookOpen size={16}/> 
                   {(isExtinction || isExplosion) ? '事件描述' : '時期特徵'}
                 </h3>
-                <p className="text-gray-700 leading-relaxed text-lg">
-                  {(isExtinction || isExplosion) ? unit.desc : (unit.description || "暫無詳細描述。")}
-                </p>
+                <div className="text-gray-700 leading-relaxed text-lg">
+                {(isExtinction || isExplosion) ? unit.desc : (unit.description || "暫無詳細描述。")}
+                </div>
               </div>
 
               {unit.children && unit.children.length > 0 && (
