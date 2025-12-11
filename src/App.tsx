@@ -28,7 +28,7 @@ interface GeologicalNode {
   children?: GeologicalNode[];
   type?: UnitType;
   time?: string;
-  desc?: string;
+  desc?: string | React.ReactNode;
 }
 
 interface SmartImageProps {
