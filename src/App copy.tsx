@@ -24,7 +24,7 @@ interface GeologicalNode {
   start?: number;
   end?: number;
   theme?: string;
-  description?: string;
+  description?: string | React.ReactNode;
   children?: GeologicalNode[];
   type?: UnitType;
   time?: string;
@@ -190,7 +190,17 @@ const geologicalData: GeologicalNode[] = [
         englishName: 'Holocene Extinction',
         time: '現在',
         image: 'Holocene_Extinction.jpg',
-        desc: '全新世滅絕事件：由人類活動、氣候變遷與棲地破壞引起。'
+        // 修改 desc 如下：
+        desc: (
+          <>
+            <span className="font-bold text-gray-900 block mb-4 text-xl">
+            【全新世滅絕：一場由人類導演的無聲告別】
+            </span>
+            <span className="block leading-relaxed">
+            如果說地球過去的五次大滅絕是系統的「自然重開機」（像是隕石撞擊導致恐龍滅絕），那麼我們現在經歷的「全新世滅絕」(又稱第六次大滅絕)，則是一場由人類親手按下刪除鍵的危機。這場滅絕的獨特之處在於「速度」與「成因」。從一萬年前長毛象等巨型動物倒在人類的長矛下開始，到今日熱帶雨林被推土機夷平，無數物種(據估計每年達 14 萬種)甚至還來不及被取名就已消失。這不是氣候的自然循環，而是人為的擴張。數據顯示，自文明誕生以來，已有 83% 的野生動物永遠離開了舞台。這不只是數字的減少，而是地球這本豐富的「生命圖書館」，正在被我們以史無前例的速度撕毀。
+            </span>
+          </>
+        )
       },
       {
         id: 'cenozoic',
@@ -211,8 +221,48 @@ const geologicalData: GeologicalNode[] = [
             description: '人類出現，冰河時期循環。',
             image: 'Quaternary.jpg',
             children: [
-              { id: 'holocene', name: '全新世 (Holocene)', englishName: 'Holocene', start: 0.0117, end: 0, desc: '文明發展，人類世。', image: 'Holocene.jpg' },
-              { id: 'pleistocene', name: '更新世 (Pleistocene)', englishName: 'Pleistocene', start: 2.58, end: 0.0117, desc: '巨型動物群，冰河期。', image: 'Pleistocene.jpg' }
+              { 
+                id: 'holocene', 
+                name: '全新世 (Holocene)', 
+                englishName: 'Holocene', 
+                start: 0.0117, 
+                end: 0, 
+                image: 'Holocene.jpg',
+                description: (
+                  <>
+                    <span className="font-bold text-gray-900 block mb-3 text-xl">
+                    【全新世：人類文明登場的「黃金舞台」】
+                    </span>
+                    <span className="block leading-relaxed mb-4">
+                    全新世(Holocene)，希臘文意為「完全新近的」，這不僅是地質年代表上最新的一頁，更是人類文明專屬的「黃金時段」。這段時期氣候趨於溫暖穩定，恰好提供了完美的環境，讓人類從新石器時代一路發展至今日的科技社會。
+                    </span>
+                    <span className="block leading-relaxed">
+                    科學家就像閱讀「大自然的日記本」一樣，透過鑽取冰芯、觀察樹木年輪與鐘乳石，解讀這段氣候歷史。雖然這段時期相對平穩，但地球的舞台佈景仍持續變動：板塊漂移重塑了洋流與生態(如南北美洲的物種大遷徙)，而偶發的隕石撞擊與劇烈海嘯，更可能成為了人類神話中「大洪水」或「諾亞方舟」的靈感原點。簡言之，全新世就是一部地質力量與人類故事緊密交織的史詩。
+                    </span>
+                  </>
+                )
+              },
+              { 
+                id: 'pleistocene', 
+                name: '更新世 (Pleistocene)', 
+                englishName: 'Pleistocene', 
+                start: 2.58, 
+                end: 0.0117, 
+                image: 'Pleistocene.jpg',
+                description: (
+                  <>
+                    <span className="font-bold text-gray-900 block mb-3 text-xl">
+                    【更新世：冰河世紀與人類的壯遊起點】
+                    </span>
+                    <span className="block leading-relaxed mb-4">
+                    更新世(Pleistocene)聽起來很陌生，但如果我說「冰原歷險記」，你一定秒懂！這就是那個猛獁象與劍齒虎漫步的「冰河時代」。
+                    </span>
+                    <span className="block leading-relaxed">
+                    這段時期，地球像是一個正在打寒顫的巨人，反覆經歷著冰凍(冰期)與解凍(間冰期)的循環。最冷的時候，地球表面有 30% 都被厚重的冰層覆蓋。更有趣的是，因為大量海水結成了冰，海平面大幅下降(比現在低了約 120 公尺)，原本隔海相望的大陸之間露出了「海底陸橋」(如連接亞洲與北美的白令陸橋)。這對我們至關重要，因為人類(人屬)正是在這段嚴酷的時期登場，並利用這些大自然臨時搭建的橋樑，完成了走出非洲、擴散至全球的「史詩級壯遊」。
+                    </span>
+                  </>
+                )
+              },
             ]
           },
           {
@@ -400,14 +450,24 @@ const geologicalData: GeologicalNode[] = [
             description: '寒武紀大爆發，大多數動物門類出現。',
             image: 'Cambrian.jpg',
             children: [
-               {
+              {
                 type: 'explosion',
                 id: 'cambrian_explosion',
                 name: '寒武紀大爆發 (生命綻放)',
                 englishName: 'Cambrian Explosion',
                 time: '~538.8 Ma',
                 image: 'Cambrian_Explosion.jpg',
-                desc: '大約 5.4 億年前，地球海洋上演了一場名為「寒武紀大爆發」的生物狂歡。在相對極短的時間內，生命從簡單柔軟的形態，迅速演化出擁有堅硬外殼與骨骼（礦化組織）的複雜物種。這不僅大幅提升了生物多樣性，更奠定了幾乎所有現代動物——包括人類——的身體基本藍圖（門）。透過加拿大伯吉斯頁岩與中國澄江生物群的珍貴化石，我們得以見證這段「演化創意大爆發」的壯麗時刻，它是地球生命最關鍵的轉捩點。'
+                // 修改 desc 如下：
+                desc: (
+                  <>
+                    <span className="font-bold text-gray-900 block mb-4 text-xl">
+                    【寒武紀大爆發：生命史上的演化煙火秀】
+                    </span>
+                    <span className="block leading-relaxed">
+                    大約 5.4 億年前，地球海洋上演了一場名為「寒武紀大爆發」的生物狂歡。在相對極短的時間內，生命從簡單柔軟的形態，迅速演化出擁有堅硬外殼與骨骼（礦化組織）的複雜物種。這不僅大幅提升了生物多樣性，更奠定了幾乎所有現代動物——包括人類——的身體基本藍圖（門）。透過加拿大伯吉斯頁岩與中國澄江生物群的珍貴化石，我們得以見證這段「演化創意大爆發」的壯麗時刻，它是地球生命最關鍵的轉捩點。
+                    </span>
+                  </>
+                )
               }
             ]
           }
@@ -611,7 +671,7 @@ const DetailPanel: React.FC<DetailPanelProps> = ({ unit, onClose, onNavigate }) 
   return (
     <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4" onClick={onClose}>
       <div 
-        className="bg-white rounded-xl shadow-2xl max-w-4xl w-full overflow-hidden animate-in fade-in zoom-in-95 duration-200 flex flex-col max-h-[90vh]"
+        className="bg-white rounded-xl shadow-2xl max-w-7xl w-full overflow-hidden animate-in fade-in zoom-in-95 duration-200 flex flex-col max-h-[90vh]"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="bg-gray-100 border-b border-gray-200 p-2 flex justify-between items-center flex-shrink-0">
@@ -654,7 +714,7 @@ const DetailPanel: React.FC<DetailPanelProps> = ({ unit, onClose, onNavigate }) 
         </div>
 
         <div className="flex flex-col md:flex-row flex-1 overflow-hidden">
-          <div className="w-full md:w-1/2 h-48 md:h-auto relative bg-gray-100 flex-shrink-0">
+          <div className="w-full md:w-2/3 h-64 md:h-auto relative bg-gray-100 flex-shrink-0">
             <SmartImage 
               src={unit.image} 
               alt={unit.name} 
@@ -664,7 +724,7 @@ const DetailPanel: React.FC<DetailPanelProps> = ({ unit, onClose, onNavigate }) 
             />
           </div>
 
-          <div className="w-full md:w-1/2 flex flex-col h-full overflow-hidden bg-white">
+          <div className="w-full md:w-1/3 flex flex-col h-full overflow-hidden bg-white">
             <div className={`p-6 border-b ${headerBg} ${headerBorder}`}>
               <div>
                   <h2 className={`text-3xl font-bold ${titleColor}`}>
@@ -689,9 +749,9 @@ const DetailPanel: React.FC<DetailPanelProps> = ({ unit, onClose, onNavigate }) 
                   <BookOpen size={16}/> 
                   {(isExtinction || isExplosion) ? '事件描述' : '時期特徵'}
                 </h3>
-                <p className="text-gray-700 leading-relaxed text-lg">
+                <div className="text-gray-700 leading-relaxed text-lg max-h-[200px] overflow-y-auto pr-4">
                   {(isExtinction || isExplosion) ? unit.desc : (unit.description || "暫無詳細描述。")}
-                </p>
+                </div>
               </div>
 
               {unit.children && unit.children.length > 0 && (

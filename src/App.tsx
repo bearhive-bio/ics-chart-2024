@@ -180,7 +180,20 @@ const geologicalData: GeologicalNode[] = [
     start: 538.8,
     end: 0,
     theme: 'sky',
-    description: '複雜生命形式大量出現的時期。',
+    // ★ 修改這裡：將 description 改成豐富的圖文排版
+    description: (
+      <>
+        <span className="font-bold text-gray-900 block mb-3 text-xl">
+          顯著生命的時代：從寒武紀到現代
+        </span>
+        <span className="block leading-relaxed mb-4">
+          「顯生宙」意為「可見的生命」，標誌著複雜多細胞生物大量繁衍的時期。從寒武紀大爆發開始，地球生命形式經歷了爆炸性的多樣化，無脊椎動物、魚類、兩棲類、爬行類、恐龍、鳥類與哺乳動物相繼登上歷史舞台。
+        </span>
+        <span className="block leading-relaxed">
+          這個時期包含了古生代、中生代與新生代，見證了多次生物大滅絕與復甦，也是植物登陸並覆蓋地表的關鍵時期。我們目前就生活在顯生宙的最後一刻。
+        </span>
+      </>
+    ),
     image: 'Phanerozoic.jpg',
     children: [
       {
