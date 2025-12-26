@@ -222,7 +222,19 @@ const geologicalData: GeologicalNode[] = [
         start: 66.0,
         end: 0,
         theme: 'emerald',
-        description: '哺乳動物與鳥類的時代，顯花植物興盛。',
+        description: (
+          <>
+            <span className="font-bold text-gray-900 block mb-3 text-xl">
+              顯著生命的時代：從寒武紀到現代
+            </span>
+            <span className="block leading-relaxed mb-4">
+              「顯生宙」意為「可見的生命」，標誌著複雜多細胞生物大量繁衍的時期。從寒武紀大爆發開始，地球生命形式經歷了爆炸性的多樣化，無脊椎動物、魚類、兩棲類、爬行類、恐龍、鳥類與哺乳動物相繼登上歷史舞台。
+            </span>
+            <span className="block leading-relaxed">
+              這個時期包含了古生代、中生代與新生代，見證了多次生物大滅絕與復甦，也是植物登陸並覆蓋地表的關鍵時期。我們目前就生活在顯生宙的最後一刻。
+            </span>
+          </>
+        ),
         image: 'Cenozoic.jpg',
         children: [
           {
@@ -231,7 +243,19 @@ const geologicalData: GeologicalNode[] = [
             englishName: 'Quaternary',
             start: 2.58,
             end: 0,
-            description: '人類出現，冰河時期循環。',
+            description: (
+              <>
+                <span className="font-bold text-gray-900 block mb-3 text-xl">
+                  顯著生命的時代：從寒武紀到現代
+                </span>
+                <span className="block leading-relaxed mb-4">
+                  「顯生宙」意為「可見的生命」，標誌著複雜多細胞生物大量繁衍的時期。從寒武紀大爆發開始，地球生命形式經歷了爆炸性的多樣化，無脊椎動物、魚類、兩棲類、爬行類、恐龍、鳥類與哺乳動物相繼登上歷史舞台。
+                </span>
+                <span className="block leading-relaxed">
+                  這個時期包含了古生代、中生代與新生代，見證了多次生物大滅絕與復甦，也是植物登陸並覆蓋地表的關鍵時期。我們目前就生活在顯生宙的最後一刻。
+                </span>
+              </>
+            ),
             image: 'Quaternary.jpg',
             children: [
               { 
@@ -284,11 +308,62 @@ const geologicalData: GeologicalNode[] = [
             englishName: 'Neogene',
             start: 23.03,
             end: 2.58,
-            description: '哺乳動物和鳥類繼續演化，早期人類祖先出現。',
+            description: (
+              <>
+                <span className="font-bold text-gray-900 block mb-3 text-xl">
+                  顯著生命的時代：從寒武紀到現代
+                </span>
+                <span className="block leading-relaxed mb-4">
+                  「顯生宙」意為「可見的生命」，標誌著複雜多細胞生物大量繁衍的時期。從寒武紀大爆發開始，地球生命形式經歷了爆炸性的多樣化，無脊椎動物、魚類、兩棲類、爬行類、恐龍、鳥類與哺乳動物相繼登上歷史舞台。
+                </span>
+                <span className="block leading-relaxed">
+                  這個時期包含了古生代、中生代與新生代，見證了多次生物大滅絕與復甦，也是植物登陸並覆蓋地表的關鍵時期。我們目前就生活在顯生宙的最後一刻。
+                </span>
+              </>
+            ),
             image: 'Neogene.jpg',
             children: [
-              { id: 'pliocene', name: '上新世 (Pliocene)', englishName: 'Pliocene', start: 5.333, end: 2.58, image: 'Pliocene.jpg' },
-              { id: 'miocene', name: '中新世 (Miocene)', englishName: 'Miocene', start: 23.03, end: 5.333, image: 'Miocene.jpg' }
+              { id: 'pliocene',
+                name: '上新世 (Pliocene)',
+                englishName: 'Pliocene',
+                start: 5.333,
+                end: 2.58,
+                image: 'Pliocene.jpg',
+                description: (
+                  <>
+                    <span className="font-bold text-gray-900 block mb-3 text-xl">
+                      顯著生命的時代：從寒武紀到現代
+                    </span>
+                    <span className="block leading-relaxed mb-4">
+                      「顯生宙」意為「可見的生命」，標誌著複雜多細胞生物大量繁衍的時期。從寒武紀大爆發開始，地球生命形式經歷了爆炸性的多樣化，無脊椎動物、魚類、兩棲類、爬行類、恐龍、鳥類與哺乳動物相繼登上歷史舞台。
+                    </span>
+                    <span className="block leading-relaxed">
+                      這個時期包含了古生代、中生代與新生代，見證了多次生物大滅絕與復甦，也是植物登陸並覆蓋地表的關鍵時期。我們目前就生活在顯生宙的最後一刻。
+                    </span>
+                  </>
+                ),
+              },
+             
+              { id: 'miocene',
+                name: '中新世 (Miocene)',
+                englishName: 'Miocene',
+                start: 23.03,
+                end: 5.333,
+                image: 'Miocene.jpg',
+                description: (
+                  <>
+                    <span className="font-bold text-gray-900 block mb-3 text-xl">
+                      顯著生命的時代：從寒武紀到現代
+                    </span>
+                    <span className="block leading-relaxed mb-4">
+                      「顯生宙」意為「可見的生命」，標誌著複雜多細胞生物大量繁衍的時期。從寒武紀大爆發開始，地球生命形式經歷了爆炸性的多樣化，無脊椎動物、魚類、兩棲類、爬行類、恐龍、鳥類與哺乳動物相繼登上歷史舞台。
+                    </span>
+                    <span className="block leading-relaxed">
+                      這個時期包含了古生代、中生代與新生代，見證了多次生物大滅絕與復甦，也是植物登陸並覆蓋地表的關鍵時期。我們目前就生活在顯生宙的最後一刻。
+                    </span>
+                  </>
+                ),
+               }
             ]
           },
           {
@@ -300,9 +375,68 @@ const geologicalData: GeologicalNode[] = [
             description: '恐龍滅絕後，哺乳動物填補生態位。',
             image: 'Paleogene.jpg',
             children: [
-              { id: 'oligocene', name: '漸新世 (Oligocene)', englishName: 'Oligocene', start: 33.9, end: 23.03, image: 'Oligocene.jpg' },
-              { id: 'eocene', name: '始新世 (Eocene)', englishName: 'Eocene', start: 56.0, end: 33.9, image: 'Eocene.jpg' },
-              { id: 'paleocene', name: '古新世 (Paleocene)', englishName: 'Paleocene', start: 66.0, end: 56.0, image: 'Paleocene.jpg' }
+              { id: 'oligocene',
+                name: '漸新世 (Oligocene)',
+                englishName: 'Oligocene',
+                start: 33.9,
+                end: 23.03,
+                image: 'Oligocene.jpg',
+                description: (
+                  <>
+                    <span className="font-bold text-gray-900 block mb-3 text-xl">
+                      顯著生命的時代：從寒武紀到現代
+                    </span>
+                    <span className="block leading-relaxed mb-4">
+                      「顯生宙」意為「可見的生命」，標誌著複雜多細胞生物大量繁衍的時期。從寒武紀大爆發開始，地球生命形式經歷了爆炸性的多樣化，無脊椎動物、魚類、兩棲類、爬行類、恐龍、鳥類與哺乳動物相繼登上歷史舞台。
+                    </span>
+                    <span className="block leading-relaxed">
+                      這個時期包含了古生代、中生代與新生代，見證了多次生物大滅絕與復甦，也是植物登陸並覆蓋地表的關鍵時期。我們目前就生活在顯生宙的最後一刻。
+                    </span>
+                  </>
+                ),
+               },
+            
+              { id: 'eocene',
+                name: '始新世 (Eocene)',
+                englishName: 'Eocene',
+                start: 56.0,
+                end: 33.9,
+                image: 'Eocene.jpg',
+                description: (
+                  <>
+                    <span className="font-bold text-gray-900 block mb-3 text-xl">
+                      顯著生命的時代：從寒武紀到現代
+                    </span>
+                    <span className="block leading-relaxed mb-4">
+                      「顯生宙」意為「可見的生命」，標誌著複雜多細胞生物大量繁衍的時期。從寒武紀大爆發開始，地球生命形式經歷了爆炸性的多樣化，無脊椎動物、魚類、兩棲類、爬行類、恐龍、鳥類與哺乳動物相繼登上歷史舞台。
+                    </span>
+                    <span className="block leading-relaxed">
+                      這個時期包含了古生代、中生代與新生代，見證了多次生物大滅絕與復甦，也是植物登陸並覆蓋地表的關鍵時期。我們目前就生活在顯生宙的最後一刻。
+                    </span>
+                  </>
+                ),
+               },
+             
+              { id: 'paleocene',
+                name: '古新世 (Paleocene)',
+                englishName: 'Paleocene',
+                start: 66.0,
+                end: 56.0,
+                image: 'Paleocene.jpg',
+                description: (
+                  <>
+                    <span className="font-bold text-gray-900 block mb-3 text-xl">
+                      顯著生命的時代：從寒武紀到現代
+                    </span>
+                    <span className="block leading-relaxed mb-4">
+                      「顯生宙」意為「可見的生命」，標誌著複雜多細胞生物大量繁衍的時期。從寒武紀大爆發開始，地球生命形式經歷了爆炸性的多樣化，無脊椎動物、魚類、兩棲類、爬行類、恐龍、鳥類與哺乳動物相繼登上歷史舞台。
+                    </span>
+                    <span className="block leading-relaxed">
+                      這個時期包含了古生代、中生代與新生代，見證了多次生物大滅絕與復甦，也是植物登陸並覆蓋地表的關鍵時期。我們目前就生活在顯生宙的最後一刻。
+                    </span>
+                  </>
+                ),
+               }
             ]
           }
         ]
@@ -314,7 +448,19 @@ const geologicalData: GeologicalNode[] = [
         englishName: 'K-Pg Extinction',
         time: '66.0 Ma',
         image: 'K_Pg_Extinction.jpg',
-        desc: '白堊紀-古近紀滅絕：非鳥類恐龍全數滅絕，推測為主小行星撞擊導致。'
+        desc: (
+          <>
+            <span className="font-bold text-red-800 block mb-3 text-xl">
+              恐龍時代的終結：小行星撞擊與環境劇變
+            </span>
+            <span className="block leading-relaxed mb-4">
+              發生於約 6600 萬年前的白堊紀─古近紀滅絕事件，是地球歷史上最近一次的大滅絕。最廣為接受的成因是一顆直徑約 10 公里的小行星撞擊了今日墨西哥的希克蘇魯伯地區。
+            </span>
+            <span className="block leading-relaxed">
+              這次撞擊導致了全球性的氣候劇變，包括長期的「撞擊冬天」與光合作用停止。結果導致非鳥類恐龍全數滅絕，翼龍、滄龍與菊石也完全消失。這次事件雖然終結了爬行動物的統治，卻也為哺乳動物（以及後後來的人類）的崛起騰出了生態位。
+            </span>
+          </>
+        )
       },
       {
         id: 'mesozoic',
@@ -323,7 +469,19 @@ const geologicalData: GeologicalNode[] = [
         start: 251.9,
         end: 66.0,
         theme: 'cyan',
-        description: '爬行動物的時代，恐龍稱霸地球。',
+        description: (
+          <>
+            <span className="font-bold text-gray-900 block mb-3 text-xl">
+              顯著生命的時代：從寒武紀到現代
+            </span>
+            <span className="block leading-relaxed mb-4">
+              「顯生宙」意為「可見的生命」，標誌著複雜多細胞生物大量繁衍的時期。從寒武紀大爆發開始，地球生命形式經歷了爆炸性的多樣化，無脊椎動物、魚類、兩棲類、爬行類、恐龍、鳥類與哺乳動物相繼登上歷史舞台。
+            </span>
+            <span className="block leading-relaxed">
+              這個時期包含了古生代、中生代與新生代，見證了多次生物大滅絕與復甦，也是植物登陸並覆蓋地表的關鍵時期。我們目前就生活在顯生宙的最後一刻。
+            </span>
+          </>
+        ),
         image: 'Mesozoic.jpg',
         children: [
           {
@@ -332,7 +490,19 @@ const geologicalData: GeologicalNode[] = [
             englishName: 'Cretaceous',
             start: 145.0,
             end: 66.0,
-            description: '恐龍多樣化達到頂峰，顯花植物出現。',
+            description: (
+              <>
+                <span className="font-bold text-gray-900 block mb-3 text-xl">
+                  顯著生命的時代：從寒武紀到現代
+                </span>
+                <span className="block leading-relaxed mb-4">
+                  「顯生宙」意為「可見的生命」，標誌著複雜多細胞生物大量繁衍的時期。從寒武紀大爆發開始，地球生命形式經歷了爆炸性的多樣化，無脊椎動物、魚類、兩棲類、爬行類、恐龍、鳥類與哺乳動物相繼登上歷史舞台。
+                </span>
+                <span className="block leading-relaxed">
+                  這個時期包含了古生代、中生代與新生代，見證了多次生物大滅絕與復甦，也是植物登陸並覆蓋地表的關鍵時期。我們目前就生活在顯生宙的最後一刻。
+                </span>
+              </>
+            ),
             image: 'Cretaceous.jpg',
             children: []
           },
@@ -342,7 +512,19 @@ const geologicalData: GeologicalNode[] = [
             englishName: 'Jurassic',
             start: 201.3,
             end: 145.0,
-            description: '巨型恐龍（如蜥腳類）繁盛，始祖鳥出現。',
+            description: (
+              <>
+                <span className="font-bold text-gray-900 block mb-3 text-xl">
+                  顯著生命的時代：從寒武紀到現代
+                </span>
+                <span className="block leading-relaxed mb-4">
+                  「顯生宙」意為「可見的生命」，標誌著複雜多細胞生物大量繁衍的時期。從寒武紀大爆發開始，地球生命形式經歷了爆炸性的多樣化，無脊椎動物、魚類、兩棲類、爬行類、恐龍、鳥類與哺乳動物相繼登上歷史舞台。
+                </span>
+                <span className="block leading-relaxed">
+                  這個時期包含了古生代、中生代與新生代，見證了多次生物大滅絕與復甦，也是植物登陸並覆蓋地表的關鍵時期。我們目前就生活在顯生宙的最後一刻。
+                </span>
+              </>
+            ),
             image: 'Jurassic.jpg',
             children: []
           },
@@ -353,7 +535,22 @@ const geologicalData: GeologicalNode[] = [
             englishName: 'Tr-J Extinction',
             time: '201.3 Ma',
             image: 'Tr_J_Extinction.jpg',
-            desc: '三疊紀-侏羅紀滅絕：鱷類近親與大型兩棲類滅絕，為恐龍稱霸鋪路。'
+            desc: (
+              <>
+                <span className="font-bold text-red-800 block mb-3 text-xl">
+                【三疊紀—侏羅紀滅絕：恐龍皇朝的加冕禮】
+                </span>
+                <span className="font-bold text-red-800 block mb-3 text-xl">
+                (The Triassic-Jurassic Extinction: The Coronation of the Dinosaur Dynasty)
+                </span>
+                <span className="block leading-relaxed mb-4">
+                如果說侏羅紀是恐龍的「黃金盛世」，那麼三疊紀末期的這場滅絕事件，就是讓恐龍從「配角」晉升為「主角」的關鍵轉捩點。在兩億年前，恐龍雖然已經出現，但牠們的日子並不好過，當時地球的霸主其實是一群長得像鱷魚的兇猛爬行動物（偽鱷類）。然而，隨著超級大陸（盤古大陸）開始分裂，地殼被撕裂出一道道巨大的傷口，引發了地球史上規模最大的火山活動之一。大量的岩漿與溫室氣體噴發，讓地球瞬間變成了一個高溫、缺氧的「超級烤箱」。這場災難無情地清洗了海陸生態，導致約 76% 的物種就此消失。
+                </span>
+                <span className="block leading-relaxed">
+                但這場浩劫對恐龍來說，卻是命運贈送的一張「頭獎彩券」。那些原本壓制著恐龍的競爭對手（巨大的鱷魚親戚們）因為無法適應劇變而紛紛滅絕，反倒是恐龍憑藉著獨特的生理優勢（或許是更高效的呼吸系統或保溫能力）奇蹟般地活了下來。當煙硝散去，恐龍發現原本擁擠的地球突然變得空蕩蕩的，所有的生態棲位都空了出來。於是，牠們迅速接管了這個世界，體型開始變得巨大化，正式開啟了長達一億多年的地球統治霸業。如果沒有這場滅絕事件「清場」，我們熟知的霸王龍與雷龍可能永遠沒有登場的機會。
+                </span>
+              </>
+            )
           },
           {
             id: 'triassic',
@@ -361,7 +558,19 @@ const geologicalData: GeologicalNode[] = [
             englishName: 'Triassic',
             start: 251.9,
             end: 201.3,
-            description: '第一批恐龍與哺乳動物出現，盤古大陸形成。',
+            description: (
+              <>
+                <span className="font-bold text-gray-900 block mb-3 text-xl">
+                  顯著生命的時代：從寒武紀到現代
+                </span>
+                <span className="block leading-relaxed mb-4">
+                  「顯生宙」意為「可見的生命」，標誌著複雜多細胞生物大量繁衍的時期。從寒武紀大爆發開始，地球生命形式經歷了爆炸性的多樣化，無脊椎動物、魚類、兩棲類、爬行類、恐龍、鳥類與哺乳動物相繼登上歷史舞台。
+                </span>
+                <span className="block leading-relaxed">
+                  這個時期包含了古生代、中生代與新生代，見證了多次生物大滅絕與復甦，也是植物登陸並覆蓋地表的關鍵時期。我們目前就生活在顯生宙的最後一刻。
+                </span>
+              </>
+            ),
             image: 'Triassic.jpg',
             children: []
           }
@@ -374,7 +583,22 @@ const geologicalData: GeologicalNode[] = [
         englishName: 'P-Tr Extinction',
         time: '251.9 Ma',
         image: 'P_Tr_Extinction.jpg',
-        desc: '二疊紀-三疊紀滅絕 (大死亡)：地球史上最嚴重滅絕，超過90%海洋物種消失。'
+        desc: (
+          <>
+            <span className="font-bold text-red-800 block mb-3 text-xl">
+            【二疊紀—三疊紀滅絕：地球生命的瀕死重啟】
+            </span>
+            <span className="font-bold text-red-800 block mb-3 text-xl">
+            (Permian-Triassic Extinction: The Great Dying and the Grand Reset)
+            </span>
+            <span className="block leading-relaxed mb-4">
+            如果說其他的滅絕事件是地球生了一場大病，那麼發生在 2.52 億年前的二疊紀末期滅絕，簡直就是地球心跳停止的「瀕死體驗」。這被科學家稱為「大死亡」（The Great Dying），是地球史上最慘烈的一次歸零。當時，並沒有巨大的隕石撞擊，兇手來自地球內部——位於現今西伯利亞地區的「超級地函柱」爆發。這不是普通的火山噴發，而是持續數十萬年的岩漿洪流，覆蓋範圍相當於半個美國大。隨之釋放的巨量二氧化碳與甲烷，讓全球氣溫急劇飆升，海洋因為高溫而缺氧、酸化，變成了一鍋死寂的「紫色毒湯」。這場浩劫帶走了約 96% 的海洋生物與 70% 的陸地脊椎動物，連稱霸海洋兩億多年的三葉蟲也就此寫下了句點。
+            </span>
+            <span className="block leading-relaxed">
+            然而，正是在這片死寂的廢墟中，演化的劇本被徹底改寫了。在災難之前，陸地上的霸主其實是我們的遠親——合弓綱動物（似哺乳爬行動物），如果不發生這場滅絕，哺乳類可能早就統治了地球。但因為這場「大重啟」，原本繁盛的合弓綱幾乎全軍覆沒，少數倖存者（如水龍獸）雖然撐過了浩劫，卻無力阻擋新勢力的崛起。生態系的真空狀態，給了另一支原本不起眼的演化支系——主龍類（Archosaurs）絕佳的機會。牠們憑藉著更高效的生理結構迅速佔領空缺，並最終演化出了恐龍。可以說，這場將生命逼入絕境的災難，諷刺地成為了恐龍王朝崛起的奠基石，也將哺乳類的輝煌時刻整整推遲了一億五千萬年。
+            </span>
+          </>
+        )
       },
       {
         id: 'paleozoic',
@@ -383,7 +607,19 @@ const geologicalData: GeologicalNode[] = [
         start: 538.8,
         end: 251.9,
         theme: 'orange',
-        description: '生命大爆發至二疊紀大滅絕。',
+        description: (
+          <>
+            <span className="font-bold text-gray-900 block mb-3 text-xl">
+              顯著生命的時代：從寒武紀到現代
+            </span>
+            <span className="block leading-relaxed mb-4">
+              「顯生宙」意為「可見的生命」，標誌著複雜多細胞生物大量繁衍的時期。從寒武紀大爆發開始，地球生命形式經歷了爆炸性的多樣化，無脊椎動物、魚類、兩棲類、爬行類、恐龍、鳥類與哺乳動物相繼登上歷史舞台。
+            </span>
+            <span className="block leading-relaxed">
+              這個時期包含了古生代、中生代與新生代，見證了多次生物大滅絕與復甦，也是植物登陸並覆蓋地表的關鍵時期。我們目前就生活在顯生宙的最後一刻。
+            </span>
+          </>
+        ),
         image: 'Paleozoic.jpg',
         children: [
           {
@@ -392,7 +628,19 @@ const geologicalData: GeologicalNode[] = [
             englishName: 'Permian',
             start: 298.9,
             end: 251.9,
-            description: '盤古大陸聚合，羊膜動物擴散。',
+            description: (
+              <>
+                <span className="font-bold text-gray-900 block mb-3 text-xl">
+                  顯著生命的時代：從寒武紀到現代
+                </span>
+                <span className="block leading-relaxed mb-4">
+                  「顯生宙」意為「可見的生命」，標誌著複雜多細胞生物大量繁衍的時期。從寒武紀大爆發開始，地球生命形式經歷了爆炸性的多樣化，無脊椎動物、魚類、兩棲類、爬行類、恐龍、鳥類與哺乳動物相繼登上歷史舞台。
+                </span>
+                <span className="block leading-relaxed">
+                  這個時期包含了古生代、中生代與新生代，見證了多次生物大滅絕與復甦，也是植物登陸並覆蓋地表的關鍵時期。我們目前就生活在顯生宙的最後一刻。
+                </span>
+              </>
+            ),
             image: 'Permian.jpg',
             children: []
           },
@@ -402,7 +650,19 @@ const geologicalData: GeologicalNode[] = [
             englishName: 'Carboniferous',
             start: 358.9,
             end: 298.9,
-            description: '巨大的煤炭森林，昆蟲巨大化。',
+            description: (
+              <>
+                <span className="font-bold text-gray-900 block mb-3 text-xl">
+                  顯著生命的時代：從寒武紀到現代
+                </span>
+                <span className="block leading-relaxed mb-4">
+                  「顯生宙」意為「可見的生命」，標誌著複雜多細胞生物大量繁衍的時期。從寒武紀大爆發開始，地球生命形式經歷了爆炸性的多樣化，無脊椎動物、魚類、兩棲類、爬行類、恐龍、鳥類與哺乳動物相繼登上歷史舞台。
+                </span>
+                <span className="block leading-relaxed">
+                  這個時期包含了古生代、中生代與新生代，見證了多次生物大滅絕與復甦，也是植物登陸並覆蓋地表的關鍵時期。我們目前就生活在顯生宙的最後一刻。
+                </span>
+              </>
+            ),
             image: 'Carboniferous.jpg',
             children: []
           },
@@ -413,7 +673,22 @@ const geologicalData: GeologicalNode[] = [
             englishName: 'Late_Devonian_Extinction',
             time: '~372 Ma',
             image: 'Late_Devonian_Extinction.jpg',
-            desc: '晚泥盆紀滅絕：主要影響海洋生物，尤其是造礁生物（F-F 事件）。'
+            desc: (
+              <>
+                <span className="font-bold text-red-800 block mb-3 text-xl">
+                【泥盆紀後期滅絕：森林崛起的無聲代價】
+                </span>
+                <span className="font-bold text-red-800 block mb-3 text-xl">
+                (Late Devonian Extinction: The Silent Cost of the Rise of Forests)
+                </span>
+                <span className="block leading-relaxed mb-4">
+                如果說二疊紀滅絕是火山的怒吼，那麼發生在 3.7 億年前的泥盆紀後期滅絕，則是一場由「綠色革命」引發的寧靜窒息。泥盆紀被稱為「魚類的時代」，當時海洋的霸主是身披重甲、咬合力驚人的「盾皮魚類」（如巨大的鄧氏魚），牠們就像是裝甲坦克般橫行無阻。然而，這場滅絕的兇手並非來自外太空，而是來自陸地上的新鄰居——第一批森林。隨著植物演化出強壯的根系，它們深入岩石吸取養分，卻意外地將大量的磷與礦物質沖刷進海洋。這就像是強迫海洋喝下了過量的「營養補給品」，引發了史無前例的藻類大爆發（優養化）。瘋狂生長的藻類死後耗盡了水中的氧氣，將原本生機勃勃的海洋變成了一個巨大的、缺氧的「死寂密室」，讓約 75% 的物種在窒息中無聲地消逝。
+                </span>
+                <span className="block leading-relaxed">
+                這場生態浩劫雖然終結了「重裝甲魚類」的統治，卻意外地為現代魚類和我們的祖先開闢了道路。那些曾經不可一世、依賴重裝備防禦的盾皮魚類，因為無法適應缺氧環境而全數滅絕；反而是體型較小、更靈活且代謝需求較低的軟骨魚（鯊魚的祖先）與硬骨魚，憑藉著韌性倖存了下來。更有趣的是，缺氧的海洋環境可能迫使一部分魚類嘗試游向淺灘、甚至探索陸地尋求生路，這股推力間接加速了脊椎動物登陸的進程。可以說，正是這場海洋的「窒息危機」，逼出了生命向陸地進軍的勇氣，讓我們遠古的祖先最終踏上了征服陸地的旅程。
+                </span>
+              </>
+            )
           },
           {
             id: 'devonian',
@@ -421,7 +696,19 @@ const geologicalData: GeologicalNode[] = [
             englishName: 'Devonian',
             start: 419.2,
             end: 358.9,
-            description: '魚類時代，第一批四足動物登陸。',
+            description: (
+              <>
+                <span className="font-bold text-gray-900 block mb-3 text-xl">
+                  顯著生命的時代：從寒武紀到現代
+                </span>
+                <span className="block leading-relaxed mb-4">
+                  「顯生宙」意為「可見的生命」，標誌著複雜多細胞生物大量繁衍的時期。從寒武紀大爆發開始，地球生命形式經歷了爆炸性的多樣化，無脊椎動物、魚類、兩棲類、爬行類、恐龍、鳥類與哺乳動物相繼登上歷史舞台。
+                </span>
+                <span className="block leading-relaxed">
+                  這個時期包含了古生代、中生代與新生代，見證了多次生物大滅絕與復甦，也是植物登陸並覆蓋地表的關鍵時期。我們目前就生活在顯生宙的最後一刻。
+                </span>
+              </>
+            ),
             image: 'Devonian.jpg',
             children: []
           },
@@ -431,7 +718,22 @@ const geologicalData: GeologicalNode[] = [
             englishName: 'Silurian',
             start: 443.8,
             end: 419.2,
-            description: '維管束植物出現，頜魚類演化。',
+            description: (
+              <>
+                <span className="font-bold text-gray-900 block mb-3 text-xl">
+                【志留紀：絕境逢生的登陸灘頭堡】
+                </span>
+                <span className="font-bold text-gray-900 block mb-3 text-xl">
+                (The Silurian Period: The Beachhead of Resurrection and Landfall)
+                </span>
+                <span className="block leading-relaxed mb-4">
+                如果說奧陶紀的結尾是一場將生命凍結的噩夢，那麼 4.4 億年前開啟的志留紀，就是地球從重症加護病房甦醒後的「復健與回暖」。隨著岡瓦納大陸的冰蓋融化，原本被鎖住的水分重新奔回海洋，讓海平面再次回升，溫暖的淺海重新覆蓋了大陸邊緣。但这时的地球並不安靜，板塊運動劇烈，大陸板塊像慢動作的碰碰車一樣撞在一起（加里東造山運動），隆起了巨大的山脈。這創造出了一個地貌複雜多變的世界：一邊是溫暖平靜的淺海珊瑚礁，另一邊是因碰撞而混濁、充滿沉積物的海灣。這種劇烈的地質活動，雖然讓環境變得不穩定，卻也攪動了營養物質，為倖存的海洋生物提供了豐富的「災後重建資金」。
+                </span>
+                <span className="block leading-relaxed">
+                而志留紀最關鍵的環境遺產，並不在海裡，而是在頭頂那看不見的高空——「臭氧層防護罩」的正式啟用。在此之前，陸地就像是暴露在強烈紫外線下的「微波爐」，任何試圖登陸的生命都會被燒傷或破壞 DNA。但在志留紀，大氣中的氧氣濃度終於累積到足夠高，形成了一層厚實的臭氧層，有效地過濾了致命的紫外線。這個看不見的「防護罩」，將原本是生命禁區的陸地，變成了安全的「新大陸」。於是，在潮濕的水邊，第一批原始的維管束植物（如頂囊蕨）開始羞澀地探出頭來，將那原本只有紅褐色岩石的荒原，第一次染上了生命的綠意。如果沒有志留紀搭建的這個大氣屏障，地球的陸地可能至今仍是一片死寂的荒漠。
+                </span>
+              </>
+            ),
             image: 'Silurian.jpg',
             children: []
           },
@@ -442,7 +744,22 @@ const geologicalData: GeologicalNode[] = [
             englishName: 'O-S Extinction',
             time: '443.8 Ma',
             image: 'O_S_Extinction.jpg',
-            desc: '奧陶紀-志留紀滅絕：因冰河期導致海平面下降，85%海洋物種滅絕。'
+            desc: (
+              <>
+                <span className="font-bold text-red-800 block mb-3 text-xl">
+                【奧陶紀－志留紀滅絕：冰封樂園的殘酷洗禮】
+                </span>
+                <span className="font-bold text-red-800 block mb-3 text-xl">
+                (Ordovician-Silurian Extinction: The Cruel Baptism of the Frozen Paradise)
+                </span>
+                <span className="block leading-relaxed mb-4">
+                如果說後來的滅絕事件是毀滅性的「大火」，那麼發生在 4.45 億年前的奧陶紀末期滅絕，就是一場將生命凍結的「冰河陷阱」。當時的地球就像是一個溫暖的超大型水族箱，陸地上還是一片荒蕪，但海洋裡卻熱鬧非凡，三葉蟲、腕足動物和筆石正享受著廣闊淺海的「熱帶度假村」生活。然而，隨著巨大的岡瓦納大陸漂移到了南極，地球的恆溫系統突然崩潰了。大規模的冰河開始形成，鎖住了大量海水，導致全球海平面急劇下降。對於那些習慣住在溫暖淺海「舒適圈」的生物來說，這就像是家裡的屋頂突然被掀開，海水退去，原本溫暖的家園瞬間變成了乾涸或冰冷的荒原，導致約 85% 的物種在寒冷與棲地喪失的雙重打擊下徹底消失。
+                </span>
+                <span className="block leading-relaxed">
+                但這場針對海洋生命的殘酷清洗，卻意外地成為了生命韌性的「極限壓力測試」。這場滅絕並非一次性的重擊，而是「先冰凍、後暖化」的雙重折磨——當冰河期結束，冰雪融化導致海平面暴漲，缺氧的海水又對倖存者進行了第二輪淘汰。然而，正是這種極端的環境篩選，淘汰了那些過度特化、適應力差的物種，留下了生命力最強韌的「通才」。這些倖存下來的浮游生物與早期脊椎動物（無頜魚類的祖先），在隨後的志留紀中展現了驚人的復原力。當海洋環境回穩，空蕩蕩的海洋再次成為演化的實驗室，為後來「魚類時代」的爆發奠定了基礎。這場災難證明了，即使將調節器轉到「冰點」，生命依然能找到存續的微光。
+                </span>
+              </>
+            )
           },
           {
             id: 'ordovician',
@@ -450,7 +767,22 @@ const geologicalData: GeologicalNode[] = [
             englishName: 'Ordovician',
             start: 485.4,
             end: 443.8,
-            description: '海洋無脊椎動物繁盛。',
+            description: (
+              <>
+                <span className="font-bold text-gray-900 block mb-3 text-xl">
+                【奧陶紀：全面啟動的水下大都會】
+                </span>
+                <span className="font-bold text-gray-900 block mb-3 text-xl">
+                (The Ordovician Period: The Fully Activated Underwater Metropolis)
+                </span>
+                <span className="block leading-relaxed mb-4">
+                如果說寒武紀是生命這場戲的「首映之夜」，那麼緊接而來的奧陶紀（距今約 4.85 億年），就是票房大賣後的「全面擴張期」。這時的地球是一個徹頭徹尾的「超級水世界」。由於氣候異常溫暖，兩極沒有冰帽，海平面上升到了古生代的最高點。海水不再只是輕拍海岸，而是大膽地入侵內陸，將原本廣闊的陸地變成了無數星羅棋布的淺海與群島。如果你當時能從外太空俯瞰地球，你會發現那標誌性的藍色幾乎佔據了所有視野，陸地反倒成了點綴其中的島嶼。這片無邊無際、陽光穿透的淺海，成為了孕育多樣性的超級溫床，其規模之大，是現代海洋完全無法比擬的。
+                </span>
+                <span className="block leading-relaxed">
+                而在這片無限擴張的藍色領土中，生態系正經歷一場名為「奧陶紀生物大輻射」的**「城市化運動」。不同於寒武紀專注於發明奇怪的身體構造（創造新門類），奧陶紀的生物專注於將現有的設計發揚光大（增加物種數量）。海洋中第一次出現了真正的「立體建築」**——原始的珊瑚與層孔蟲開始堆疊，建造出地球上第一批礁岩，為無數生物提供了複雜的藏身處與公寓。同時，海水中微小的浮游生物爆發性增長，就像是建立了穩定的「糧食供應網」，支撐起更長、更複雜的食物鏈。如果說寒武紀搭建了生命的骨架，那麼正是奧陶紀這溫暖且廣闊的環境，為這具骨架填滿了豐富血肉，將海洋變成了一座熱鬧非凡、階級分明的水下大都會。
+                </span>
+              </>
+            ),
             image: 'Ordovician.jpg',
             children: []
           },
@@ -460,7 +792,22 @@ const geologicalData: GeologicalNode[] = [
             englishName: 'Cambrian',
             start: 538.8,
             end: 485.4,
-            description: '寒武紀大爆發，大多數動物門類出現。',
+            description: (
+              <>
+                <span className="font-bold text-gray-900 block mb-3 text-xl">
+                【寒武紀：生命首映的豪華水下劇場】
+                </span>
+                <span className="font-bold text-gray-900 block mb-3 text-xl">
+                (The Cambrian Period: The Grand Underwater Theater of Life's Premiere)
+                </span>
+                <span className="block leading-relaxed mb-4">
+                如果說後來的地質年代是熱鬧的叢林或草原，那麼 5.4 億年前的寒武紀，就像是一顆「表裡不一」的奇異星球。如果你當時站在陸地上，你會以為自己登陸了火星——放眼望去只有紅色的岩石與沙礫，沒有一棵樹、一根草，甚至聽不到一聲蟲鳴，死寂得令人發慌。但在這片荒涼的海岸線之外，情況卻截然不同。隨著前一代的超級大陸（羅迪尼亞大陸）崩解，陸塊分散漂移，導致全球海平面大幅上升，淹沒了沿海的低地。這在地球表面創造出了廣闊無邊、陽光充足且溫暖的「淺海大陸棚」。這些淺海就像是為了迎接生命而特製的「巨型恆溫培養皿」，陽光能直射海底，水溫舒適宜人，為生命的繁衍提供了最奢華的物理環境。
+                </span>
+                <span className="block leading-relaxed">
+                而這個水下劇場不只提供了場地，還準備了關鍵的「道具與特效」。在寒武紀的海洋中，化學成分發生了劇變，海水中的鈣與碳酸根離子濃度達到飽和，這意味著生物第一次可以輕鬆地從水中提取材料來建造堅硬的骨骼與外殼。同時，大氣與海洋中的氧氣含量雖然不如今日，但也終於跨過了支持複雜運動的門檻。正是這種「溫暖淺海」加上「豐富原料」的環境組合，才讓生物有本錢去嘗試長出厚重的盔甲或耗能的大腦。如果沒有寒武紀這得天獨厚的地理與化學環境做後盾，就算生命有再強的演化動力，也無法在那場「大爆發」中上演如此精彩的變裝秀。
+                </span>
+              </>
+            ),
             image: 'Cambrian.jpg',
             children: [
               {
@@ -474,10 +821,16 @@ const geologicalData: GeologicalNode[] = [
                 desc: (
                   <>
                     <span className="font-bold text-gray-900 block mb-4 text-xl">
-                    【寒武紀大爆發：生命史上的演化煙火秀】
+                    【寒武紀大爆發：生命藍圖的創意大爆炸】
+                    </span>
+                    <span className="font-bold text-gray-900 block mb-4 text-xl">
+                    (The Cambrian Explosion: The Big Bang of Biological Blueprints)
                     </span>
                     <span className="block leading-relaxed">
-                    大約 5.4 億年前，地球海洋上演了一場名為「寒武紀大爆發」的生物狂歡。在相對極短的時間內，生命從簡單柔軟的形態，迅速演化出擁有堅硬外殼與骨骼（礦化組織）的複雜物種。這不僅大幅提升了生物多樣性，更奠定了幾乎所有現代動物——包括人類——的身體基本藍圖（門）。透過加拿大伯吉斯頁岩與中國澄江生物群的珍貴化石，我們得以見證這段「演化創意大爆發」的壯麗時刻，它是地球生命最關鍵的轉捩點。
+                    如果說之前的地球是令人昏昏欲睡的「靜默默劇」，那麼 5.4 億年前的寒武紀，就是一場突然上映的「4K 3D 動作大片」。在此之前，地球上的生命大多是趴在海床上、軟綿綿且構造簡單的生物（埃迪卡拉生物群），日子過得緩慢又和平。但就在地質學上一眨眼的瞬間，演化之神彷彿突然打開了「潘朵拉的盒子」，或是喝醉了酒開始瘋狂塗鴉。海洋中突然湧現了各式各樣長相怪異的生物：有的長了五隻眼睛，有的像是巨大的外星蝦子（如奇蝦），幾乎現今所有動物的主要「身體藍圖」（門）都在這短短的兩千萬年內全數登場。這不是循序漸進的改良，而是一次瘋狂的、爆發式的創意展覽。
+                    </span>
+                    <span className="block leading-relaxed">
+                    這場演化狂歡的背後，其實是一場殘酷卻精彩的「軍備競賽」。科學家推測，可能是大氣含氧量的上升，或者是「眼睛」這個器官的發明，讓獵食者第一次「看見」了獵物。為了生存，生物們被迫開始武裝自己：有的長出了堅硬的甲殼（如三葉蟲）來防禦，有的演化出尖牙利齒來攻擊。這場「吃與被吃」的生存壓力，逼迫生命在短時間內演化出極其複雜的防禦與攻擊系統。我們今天所熟知的脊椎動物祖先，也是在這場混戰中卑微地誕生。如果沒有這場大爆發奠定了複雜生命的基礎架構，地球可能至今仍是一個只有微生物與軟體生物蠕動的寂寞星球。
                     </span>
                   </>
                 )
@@ -495,7 +848,19 @@ const geologicalData: GeologicalNode[] = [
     start: 2500,
     end: 538.8,
     theme: 'rose',
-    description: '氧氣累積，真核生物出現。分為古元古代、中元古代、新元古代。',
+    description: (
+      <>
+        <span className="font-bold text-gray-900 block mb-3 text-xl">
+          顯著生命的時代：從寒武紀到現代
+        </span>
+        <span className="block leading-relaxed mb-4">
+          「顯生宙」意為「可見的生命」，標誌著複雜多細胞生物大量繁衍的時期。從寒武紀大爆發開始，地球生命形式經歷了爆炸性的多樣化，無脊椎動物、魚類、兩棲類、爬行類、恐龍、鳥類與哺乳動物相繼登上歷史舞台。
+        </span>
+        <span className="block leading-relaxed">
+          這個時期包含了古生代、中生代與新生代，見證了多次生物大滅絕與復甦，也是植物登陸並覆蓋地表的關鍵時期。我們目前就生活在顯生宙的最後一刻。
+        </span>
+      </>
+    ),
     image: 'Proterozoic.jpg',
     children: []
   },
@@ -506,7 +871,19 @@ const geologicalData: GeologicalNode[] = [
     start: 4000,
     end: 2500,
     theme: 'amber',
-    description: '最古老的岩石與單細胞生命形式。分為始太古代、古太古代、中太古代、新太古代。',
+    description: (
+      <>
+        <span className="font-bold text-gray-900 block mb-3 text-xl">
+          顯著生命的時代：從寒武紀到現代
+        </span>
+        <span className="block leading-relaxed mb-4">
+          「顯生宙」意為「可見的生命」，標誌著複雜多細胞生物大量繁衍的時期。從寒武紀大爆發開始，地球生命形式經歷了爆炸性的多樣化，無脊椎動物、魚類、兩棲類、爬行類、恐龍、鳥類與哺乳動物相繼登上歷史舞台。
+        </span>
+        <span className="block leading-relaxed">
+          這個時期包含了古生代、中生代與新生代，見證了多次生物大滅絕與復甦，也是植物登陸並覆蓋地表的關鍵時期。我們目前就生活在顯生宙的最後一刻。
+        </span>
+      </>
+    ),
     image: 'Archean.jpg',
     children: []
   },
@@ -517,7 +894,19 @@ const geologicalData: GeologicalNode[] = [
     start: 4600,
     end: 4000,
     theme: 'violet',
-    description: '地球形成初期，熔岩表面，無地質記錄保存。',
+    description: (
+      <>
+        <span className="font-bold text-gray-900 block mb-3 text-xl">
+          顯著生命的時代：從寒武紀到現代
+        </span>
+        <span className="block leading-relaxed mb-4">
+          「顯生宙」意為「可見的生命」，標誌著複雜多細胞生物大量繁衍的時期。從寒武紀大爆發開始，地球生命形式經歷了爆炸性的多樣化，無脊椎動物、魚類、兩棲類、爬行類、恐龍、鳥類與哺乳動物相繼登上歷史舞台。
+        </span>
+        <span className="block leading-relaxed">
+          這個時期包含了古生代、中生代與新生代，見證了多次生物大滅絕與復甦，也是植物登陸並覆蓋地表的關鍵時期。我們目前就生活在顯生宙的最後一刻。
+        </span>
+      </>
+    ),
     image: 'Hadean.jpg',
     children: []
   }
