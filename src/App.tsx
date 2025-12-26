@@ -9,7 +9,9 @@ import {
   ArrowLeft, 
   ArrowRight, 
   CornerUpLeft, 
-  Sparkles
+  Sparkles,
+  Layers, 
+  X
 } from 'lucide-react';
 
 // --- Type Definitions ---
@@ -31,12 +33,14 @@ interface GeologicalNode {
   desc?: string | React.ReactNode;
 }
 
+// [修改] 新增 objectFit 屬性定義
 interface SmartImageProps {
   src: string;
   alt: string;
   className?: string;
   fallbackColor?: string;
   type?: UnitType;
+  objectFit?: 'cover' | 'contain'; // 新增此行
 }
 
 interface SpecialEventBarProps {
@@ -68,7 +72,6 @@ interface NavInfo {
 }
 
 // --- Theme Configuration (靜態樣式表) ---
-// 這裡將所有完整的 class 名稱列出，讓 Tailwind CSS 能夠正確掃描到它們。
 
 interface ThemeStyle {
   levels: { bg: string; text: string; border: string; hover: string }[];
@@ -168,6 +171,35 @@ const getThemeStyles = (theme: string) => {
 const getThemeLevelColors = (theme: string, depth = 0) => {
   const styles = getThemeStyles(theme);
   return styles.levels[Math.min(depth, styles.levels.length - 1)];
+};
+
+const findUnitInfo = (targetId: string | undefined, list: GeologicalNode[], parent: GeologicalNode | null = null): { unit: GeologicalNode, parent: GeologicalNode | null, prev: GeologicalNode | null, next: GeologicalNode | null } | null => {
+  if (!targetId) return null;
+  
+  for (let i = 0; i < list.length; i++) {
+    const item = list[i];
+    if (item.id === targetId) {
+      return {
+        unit: item,
+        parent: parent,
+        prev: list[i + 1] || null,
+        next: list[i - 1] || null
+      };
+    }
+    if (item.children) {
+      const result = findUnitInfo(targetId, item.children, item);
+      if (result) return result;
+    }
+  }
+  return null;
+};
+
+const getNavigation = (targetId: string | undefined, list: GeologicalNode[]): NavInfo | null => {
+  const info = findUnitInfo(targetId, list);
+  if (!info) return null;
+  const older = info.prev;
+  const younger = info.next;
+  return { ...info, olderSibling: older, youngerSibling: younger };
 };
 
 // --- Data ---
@@ -877,7 +909,34 @@ const geologicalData: GeologicalNode[] = [
       </>
     ),
     image: 'Proterozoic.jpg',
-    children: []
+    
+    children: [
+      {
+        id: 'ediacaran',
+        name: '埃迪卡拉紀 (Ediacaran)',
+        englishName: 'Ediacaran',
+        start: 635,
+        end: 538.8,
+        theme: 'emerald',
+        description: (
+          <>
+            <span className="font-bold text-gray-900 block mb-3 text-xl">
+            【新生代：冷卻星球上的哺乳霸業】
+            </span>
+            <span className="font-bold text-gray-900 block mb-3 text-xl">
+            (The Cenozoic Era: The Mammalian Dominance on a Cooling Planet)
+            </span>
+            <span className="block leading-relaxed mb-4">
+            如果說中生代是一場狂熱的「夏日派對」，那麼距今 6600 萬年開啟的新生代，就是派對結束後，地球逐漸將空調溫度調低的「冷靜期」。在恐龍滅絕後的初期，地球依然相當溫暖，但隨著時間推移，一場劇烈的地質運動改變了一切：印度板塊像一輛失控的卡車狠狠撞向歐亞大陸，隆起了雄偉的喜馬拉雅山脈 。這場造山運動加速了岩石風化，大量消耗了大氣中的二氧化碳，導致全球氣溫開始一路下滑。原本覆蓋全球的茂密雨林開始退縮，取而代之的是更加開闊、乾燥且耐寒的「草原生態系」。地球的地貌從單一的綠色叢林，變成了四季分明、冰雪與草原交織的複雜世界，這種環境的劇變迫使生命必須學會適應寒冷與長途遷徙。
+            </span>
+            <span className="block leading-relaxed">
+            在這個逐漸變冷且視野開闊的新舞台上，生命上演了一場名為「小卒變英雄」的勵志劇。那些曾經在恐龍腳下瑟瑟發抖、體型如老鼠般的哺乳動物，迅速填補了恐龍留下的真空。牠們不再只是躲在地洞裡，而是大膽地走向海洋（演化成鯨魚）、飛向天空（演化成蝙蝠），並奔馳在廣闊的草原上。為了適應草原生活，動物們演化出了更修長的腿（為了逃跑或追捕）和更複雜的社會行為。更有趣的是，草原的出現推動了一種特殊的演化壓力——在沒有樹木遮蔽的開闊地上，「腦力」變得比蠻力更重要。正是在這種環境下，靈長類動物開始直立行走，解放雙手，並最終點燃了智慧的火花。新生代不只是哺乳類的時代，更是智慧生命在嚴酷氣候中磨練成形的關鍵篇章。
+            </span>
+          </>
+        ),
+        image: 'ediacaran.jpg',
+      }
+    ]
   },
   {
     id: 'archean',
@@ -928,36 +987,10 @@ const geologicalData: GeologicalNode[] = [
 ];
 
 // Helper: 遞迴尋找單位及其關係
-const findUnitInfo = (targetId: string | undefined, list: GeologicalNode[], parent: GeologicalNode | null = null): { unit: GeologicalNode, parent: GeologicalNode | null, prev: GeologicalNode | null, next: GeologicalNode | null } | null => {
-  if (!targetId) return null;
-  
-  for (let i = 0; i < list.length; i++) {
-    const item = list[i];
-    if (item.id === targetId) {
-      return {
-        unit: item,
-        parent: parent,
-        prev: list[i + 1] || null,
-        next: list[i - 1] || null
-      };
-    }
-    if (item.children) {
-      const result = findUnitInfo(targetId, item.children, item);
-      if (result) return result;
-    }
-  }
-  return null;
-};
+// --- Components ---
 
-const getNavigation = (targetId: string | undefined, list: GeologicalNode[]): NavInfo | null => {
-  const info = findUnitInfo(targetId, list);
-  if (!info) return null;
-  const older = info.prev;
-  const younger = info.next;
-  return { ...info, olderSibling: older, youngerSibling: younger };
-};
-
-const SmartImage: React.FC<SmartImageProps> = ({ src, alt, className, fallbackColor, type }) => {
+// [修改] SmartImage 支援 objectFit
+const SmartImage: React.FC<SmartImageProps> = ({ src, alt, className, fallbackColor, type, objectFit = 'cover' }) => {
   const [error, setError] = useState(false);
   const imagePath = `/images/${src}`;
 
@@ -982,7 +1015,8 @@ const SmartImage: React.FC<SmartImageProps> = ({ src, alt, className, fallbackCo
     <img 
       src={imagePath} 
       alt={alt} 
-      className={`${className} object-cover`}
+      // [修改] 這裡改用傳入的 objectFit，若沒傳則預設 cover (填滿)
+      className={`${className} object-${objectFit}`}
       onError={() => setError(true)}
     />
   );
@@ -1057,6 +1091,9 @@ const SpecialEventBar: React.FC<SpecialEventBarProps> = ({ data, onSelect, depth
   );
 };
 
+// ============================================================================
+// DETAIL PANEL
+// ============================================================================
 const DetailPanel: React.FC<DetailPanelProps> = ({ unit, onClose, onNavigate }) => {
   if (!unit) return null;
 
@@ -1088,9 +1125,10 @@ const DetailPanel: React.FC<DetailPanelProps> = ({ unit, onClose, onNavigate }) 
   return (
     <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4" onClick={onClose}>
       <div 
-        className="bg-white rounded-xl shadow-2xl max-w-7xl w-full overflow-hidden animate-in fade-in zoom-in-95 duration-200 flex flex-col max-h-[90vh]"
+        className="bg-white rounded-xl shadow-2xl max-w-[95vw] w-full overflow-hidden animate-in fade-in zoom-in-95 duration-200 flex flex-col h-[90vh]"
         onClick={(e) => e.stopPropagation()}
       >
+        {/* Navigation Bar (Header) */}
         <div className="bg-gray-100 border-b border-gray-200 p-2 flex justify-between items-center flex-shrink-0">
           <div className="flex gap-2">
             {navInfo?.parent ? (
@@ -1124,34 +1162,40 @@ const DetailPanel: React.FC<DetailPanelProps> = ({ unit, onClose, onNavigate }) 
           </div>
           
           <button onClick={onClose} className="p-1.5 hover:bg-red-100 hover:text-red-600 rounded text-gray-500 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
+            <X size={20} />
           </button>
         </div>
 
-        <div className="flex flex-col md:flex-row flex-1 overflow-hidden">
-          <div className="w-full md:w-2/3 h-64 md:h-auto relative bg-gray-100 flex-shrink-0">
+        {/* Content Body */}
+        <div className="flex flex-col md:flex-row flex-1 overflow-hidden h-full">
+          
+          {/* Left: Image Area */}
+          <div className="w-full md:w-2/3 h-48 md:h-full relative bg-gray-900 flex-shrink-0 border-r border-gray-200">
             <SmartImage 
               src={unit.image} 
               alt={unit.name} 
               className="w-full h-full"
+              // [修改] 指定 objectFit="contain" 來顯示完整圖片不裁切
+              objectFit="contain"
               fallbackColor={colors.bg}
               type={unit.type}
             />
           </div>
 
+          {/* Right: Info & Children */}
           <div className="w-full md:w-1/3 flex flex-col h-full overflow-hidden bg-white">
-            <div className={`p-6 border-b ${headerBg} ${headerBorder}`}>
+            
+            {/* 1. Title Section (Fixed Height) */}
+            <div className={`p-5 border-b flex-shrink-0 ${headerBg} ${headerBorder}`}>
               <div>
-                  <h2 className={`text-3xl font-bold ${titleColor}`}>
+                  <h2 className={`text-2xl font-bold ${titleColor} leading-tight`}>
                     {unit.name}
                   </h2>
-                  <span className="font-mono text-sm text-gray-500">{unit.englishName}</span>
+                  <span className="font-mono text-xs text-gray-500">{unit.englishName}</span>
               </div>
               
-              <div className={`flex items-center gap-2 font-mono font-semibold ${iconColor} mt-2`}>
-                <Clock size={18} />
+              <div className={`flex items-center gap-2 font-mono font-semibold ${iconColor} mt-2 text-sm`}>
+                <Clock size={16} />
                 {(isExtinction || isExplosion) ? (
                   <span>{unit.time}</span>
                 ) : (
@@ -1160,62 +1204,82 @@ const DetailPanel: React.FC<DetailPanelProps> = ({ unit, onClose, onNavigate }) 
               </div>
             </div>
             
-            <div className="p-6 overflow-y-auto flex-1">
-              <div className="mb-8">
-                <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3 flex items-center gap-2">
-                  <BookOpen size={16}/> 
-                  {(isExtinction || isExplosion) ? '事件描述' : '時期特徵'}
-                </h3>
-                <div className="text-gray-700 leading-relaxed text-lg max-h-[200px] overflow-y-auto pr-4">
-                  {(isExtinction || isExplosion) ? unit.desc : (unit.description || "暫無詳細描述。")}
+            {/* 2. Scrollable Split Area */}
+            <div className="flex-1 flex flex-col min-h-0">
+                
+                {/* 2-A. Description */}
+                <div className="flex-1 overflow-y-auto p-5 border-b-4 border-gray-100 relative">
+                    <div className="sticky top-0 bg-white/95 backdrop-blur-sm pb-2 mb-2 border-b border-dashed border-gray-100 z-10 flex items-center gap-2 text-gray-400">
+                        <BookOpen size={14}/> 
+                        <span className="text-xs font-bold uppercase tracking-wider">{(isExtinction || isExplosion) ? '事件描述' : '時期特徵'}</span>
+                    </div>
+                    <div className="text-gray-700 leading-relaxed text-base pr-2 whitespace-pre-line">
+                        {(isExtinction || isExplosion) ? unit.desc : (unit.description || "暫無詳細描述。")}
+                    </div>
                 </div>
-              </div>
 
-              {unit.children && unit.children.length > 0 && (
-                <div>
-                  <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4 border-b pb-2">
-                    下分層級 <span className="text-xs font-normal text-gray-400 normal-case ml-2">(點擊進入)</span>
-                  </h3>
-                  <div className="grid grid-cols-1 gap-3">
-                    {unit.children.map((child, idx) => (
-                      <div 
-                        key={idx} 
-                        onClick={() => onNavigate(child)}
-                        className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-blue-400 hover:ring-2 hover:ring-blue-100 transition-all bg-white cursor-pointer hover:shadow-md"
-                      >
-                        <div className="flex h-20">
-                           <div className="w-24 flex-shrink-0 bg-gray-100 relative">
-                              <SmartImage 
-                                src={child.image} 
-                                alt={child.name} 
-                                className="w-full h-full group-hover:scale-105 transition-transform"
-                                fallbackColor={child.type === 'extinction' ? 'bg-red-100' : (child.type === 'explosion' ? 'bg-yellow-100' : 'bg-gray-200')}
-                                type={child.type}
-                              />
+                {/* 2-B. Children List */}
+                {unit.children && unit.children.length > 0 ? (
+                    <div className="flex-1 overflow-y-auto p-5 bg-gray-50 relative">
+                        <div className="sticky top-0 bg-gray-50/95 backdrop-blur-sm pb-2 mb-4 border-b border-dashed border-gray-200 z-10 flex items-center justify-between text-gray-400">
+                           <div className="flex items-center gap-2">
+                              <Layers size={14} />
+                              <span className="text-xs font-bold uppercase tracking-wider">下分層級</span>
                            </div>
-                           <div className="flex-1 p-3 flex flex-col justify-center">
-                              <div className="flex justify-between items-start">
-                                <span className={`font-bold flex items-center gap-1 ${child.type === 'extinction' ? 'text-red-700' : (child.type === 'explosion' ? 'text-yellow-700' : 'text-gray-800')} group-hover:text-blue-700`}>
-                                  {child.name}
-                                  {(child.type !== 'extinction' && child.type !== 'explosion') && <ChevronRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />}
-                                </span>
-                              </div>
-                              <div className="flex justify-between items-center mt-1">
-                                 <span className="text-xs text-gray-500 font-mono">
-                                   {child.englishName}
-                                 </span>
-                                 <span className={`text-xs font-mono px-2 py-0.5 rounded ${child.type === 'extinction' ? 'text-red-600 bg-red-50' : (child.type === 'explosion' ? 'text-yellow-700 bg-yellow-50' : 'text-gray-400 bg-gray-50 group-hover:bg-blue-50 group-hover:text-blue-500')}`}>
-                                   {(child.type === 'extinction' || child.type === 'explosion') ? child.time : `${child.start} Ma`}
-                                 </span>
-                              </div>
-                           </div>
+                           <span className="text-[10px] bg-white px-2 py-0.5 rounded border border-gray-200 shadow-sm text-gray-500 font-mono">
+                             {unit.children.length} 子層
+                           </span>
                         </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
+
+                        <div className="grid grid-cols-1 gap-2 pb-8">
+                            {unit.children.map((child, idx) => (
+                              <div 
+                                key={idx} 
+                                onClick={() => onNavigate(child)}
+                                className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-blue-400 hover:ring-2 hover:ring-blue-100 transition-all bg-white cursor-pointer hover:shadow-md"
+                              >
+                                <div className="flex h-16">
+                                   <div className="w-16 flex-shrink-0 bg-gray-100 relative">
+                                      <SmartImage 
+                                        src={child.image} 
+                                        alt={child.name} 
+                                        className="w-full h-full group-hover:scale-105 transition-transform"
+                                        fallbackColor={child.type === 'extinction' ? 'bg-red-100' : (child.type === 'explosion' ? 'bg-yellow-100' : 'bg-gray-200')}
+                                        type={child.type}
+                                      />
+                                   </div>
+                                   <div className="flex-1 px-3 flex flex-col justify-center">
+                                      <div className="flex justify-between items-start">
+                                        <span className={`font-bold text-sm flex items-center gap-1 ${child.type === 'extinction' ? 'text-red-700' : (child.type === 'explosion' ? 'text-yellow-700' : 'text-gray-800')} group-hover:text-blue-700`}>
+                                          <span className="truncate max-w-[140px]">{child.name}</span>
+                                        </span>
+                                      </div>
+                                      <div className="flex justify-between items-center mt-0.5">
+                                         <span className="text-[10px] text-gray-500 font-mono truncate max-w-[100px]">
+                                           {child.englishName}
+                                         </span>
+                                         {(child.type !== 'extinction' && child.type !== 'explosion') && (
+                                           <span className="text-[10px] text-gray-400 font-mono bg-gray-50 px-1 rounded">
+                                             {child.start} Ma
+                                           </span>
+                                         )}
+                                      </div>
+                                   </div>
+                                   <div className="w-6 flex items-center justify-center text-gray-300 group-hover:text-blue-500">
+                                      <ChevronRight size={14} />
+                                   </div>
+                                </div>
+                              </div>
+                            ))}
+                        </div>
+                    </div>
+                ) : (
+                    <div className="flex-none p-6 bg-gray-50 text-center text-gray-400 text-sm border-t border-gray-100">
+                        無下分層級
+                    </div>
+                )}
             </div>
+
           </div>
         </div>
       </div>
@@ -1232,7 +1296,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ data, depth = 0, onSelect, 
 
   const currentTheme = data.theme || themeColor || 'slate';
   const colors = getThemeLevelColors(currentTheme, depth);
-  const styles = getThemeStyles(currentTheme); // 取得樣式物件來使用 dashedBorder 和 line
+  const styles = getThemeStyles(currentTheme); 
   const hasChildren = data.children && data.children.length > 0;
 
   const handleToggle = (e: React.MouseEvent) => {
