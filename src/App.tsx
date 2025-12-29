@@ -33,14 +33,14 @@ interface GeologicalNode {
   desc?: string | React.ReactNode;
 }
 
-// [修改] 新增 objectFit 屬性定義
+// [修正 1] 確保介面支援 objectFit 屬性
 interface SmartImageProps {
   src: string;
   alt: string;
   className?: string;
   fallbackColor?: string;
   type?: UnitType;
-  objectFit?: 'cover' | 'contain'; // 新增此行
+  objectFit?: 'cover' | 'contain'; 
 }
 
 interface SpecialEventBarProps {
@@ -989,7 +989,7 @@ const geologicalData: GeologicalNode[] = [
 // Helper: 遞迴尋找單位及其關係
 // --- Components ---
 
-// [修改] SmartImage 支援 objectFit
+// [修正 2] 實作 SmartImage 的 objectFit 邏輯
 const SmartImage: React.FC<SmartImageProps> = ({ src, alt, className, fallbackColor, type, objectFit = 'cover' }) => {
   const [error, setError] = useState(false);
   const imagePath = `/images/${src}`;
@@ -1015,7 +1015,7 @@ const SmartImage: React.FC<SmartImageProps> = ({ src, alt, className, fallbackCo
     <img 
       src={imagePath} 
       alt={alt} 
-      // [修改] 這裡改用傳入的 objectFit，若沒傳則預設 cover (填滿)
+      // 關鍵修改：將 objectFit 應用到 class 中，object-contain 會保持比例並留白
       className={`${className} object-${objectFit}`}
       onError={() => setError(true)}
     />
@@ -1170,12 +1170,13 @@ const DetailPanel: React.FC<DetailPanelProps> = ({ unit, onClose, onNavigate }) 
         <div className="flex flex-col md:flex-row flex-1 overflow-hidden h-full">
           
           {/* Left: Image Area */}
-          <div className="w-full md:w-2/3 h-48 md:h-full relative bg-gray-900 flex-shrink-0 border-r border-gray-200">
+          {/* [修正 3] 將背景色改為 bg-black (全黑)，配合 contain 模式就會出現黑邊 */}
+          <div className="w-full md:w-2/3 h-48 md:h-full relative bg-black flex-shrink-0 border-r border-gray-200">
             <SmartImage 
               src={unit.image} 
               alt={unit.name} 
               className="w-full h-full"
-              // [修改] 指定 objectFit="contain" 來顯示完整圖片不裁切
+              // [修正 4] 指定 objectFit="contain" 來顯示完整圖片不裁切、不變形
               objectFit="contain"
               fallbackColor={colors.bg}
               type={unit.type}
