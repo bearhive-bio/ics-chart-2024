@@ -1151,6 +1151,9 @@ const geologicalData: GeologicalNode[] = [
       (The Proterozoic Eon: The Great Oxidation Catastrophe and the Snowball Trials)
       </span>
       <span className="block leading-relaxed mb-4">
+      由來：Proteros (較早) + Zoe (生命)，意指「早期的生命」，當時只有簡單的微生物。
+      </span>
+      <span className="block leading-relaxed mb-4">
       如果說太古宙是細菌們安靜的黏液天堂，那麼 25 億年前開啟的元古宙，就是一場由細菌引發的「全球生化危機」。這一切的始作俑者是一種學會了利用陽光製造能量的小傢伙——「藍綠菌」（Cyanobacteria）。它們進行光合作用，將一種對當時所有生命來說都是劇毒的廢氣排放到海水中，這種氣體就是「氧氣」。起初，這些氧氣被海洋中溶解的鐵離子吸收，生成紅色的鐵鏽沉澱，形成了今天我們開採的「帶狀鐵礦層」（Banded Iron Formations）。 但當海洋中的鐵被耗盡後，氧氣開始溢出到大氣層。這導致了兩大後果：第一，大氣中的甲烷被氧化清除，原本橙色的天空終於變成了我們熟悉的「蔚藍色」；第二，原本適應無氧環境的古老微生物遭遇了滅頂之災，這是地球史上第一場大規模滅絕事件——「大氧化事件」（Great Oxidation Event）。
       </span>
       <span className="block leading-relaxed">
@@ -1249,6 +1252,9 @@ const geologicalData: GeologicalNode[] = [
       (The Archean Eon: The Slime Water World Under the Orange Dome)
       </span>
       <span className="block leading-relaxed mb-4">
+      由來：希臘文 Arkhaios (起始/古老)，這是地球岩石和生命紀錄的「最開端」。
+      </span>
+      <span className="block leading-relaxed mb-4">
       如果說冥古宙是狂暴的火與石，那麼 40 億年前開啟的太古宙，就是地球冷卻下來後變成的一顆「有毒的水球」。當時的地表幾乎被廣闊的海洋覆蓋，陸地尚未連結成大塊的大陸，只是一串串冒著煙的火山島鏈。最令人震驚的是當時的色調：因為大氣中充滿了甲烷與二氧化碳，卻幾乎沒有氧氣，天空呈現出一種詭異的「霧霾橙色」；而海洋因為富含溶解的鐵離子，不是藍色的，而是像橄欖油一樣的「深綠色」。 這是一個對現代人類來說絕對致命的環境，空氣有毒，且紫外線毫無阻擋地轟炸著地表。
       </span>
       <span className="block leading-relaxed">
@@ -1279,6 +1285,9 @@ const geologicalData: GeologicalNode[] = [
       </span>
       <span className="font-bold text-red-800 block mb-3 text-xl">
       (The Hadean Eon: The Hellish Genesis and the Birth of the Moon)
+      </span>
+      <span className="block leading-relaxed mb-4">
+      由來：希臘神話 Hades (冥王/地獄) ，當時地球如同煉獄，充滿岩漿，像冥界一樣。
       </span>
       <span className="block leading-relaxed mb-4">
       如果說顯生宙是熱鬧的生命舞台，那麼 46 億年前開啟的冥古宙（名稱源自希臘神話的冥王 Hades），就是這座舞台正在搭建時的「熔煉工廠」。地球剛從太陽星雲的塵埃中吸積成形，地表完全沒有固態岩石，只有翻騰不休的「岩漿海」（Magma Ocean），溫度高達數千度。當時的天空不是藍色的，而是被硫磺與火山灰籠罩的黑紅色，空氣中沒有氧氣，充滿了令人窒息的二氧化碳與氮氣。最可怕的是，當時的太陽系還很年輕，太空中充滿了失控的小行星，地球每天都在承受「重轟炸」（Heavy Bombardment），每顆撞擊地球的隕石都像核彈一樣，激起千米高的岩漿巨浪。
