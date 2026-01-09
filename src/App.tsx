@@ -1144,16 +1144,25 @@ const geologicalData: GeologicalNode[] = [
     theme: 'rose',
     description: (
       <>
-        <span className="font-bold text-gray-900 block mb-3 text-xl">
-          顯著生命的時代：從寒武紀到現代
-        </span>
-        <span className="block leading-relaxed mb-4">
-          「顯生宙」意為「可見的生命」，標誌著複雜多細胞生物大量繁衍的時期。從寒武紀大爆發開始，地球生命形式經歷了爆炸性的多樣化，無脊椎動物、魚類、兩棲類、爬行類、恐龍、鳥類與哺乳動物相繼登上歷史舞台。
-        </span>
-        <span className="block leading-relaxed">
-          這個時期包含了古生代、中生代與新生代，見證了多次生物大滅絕與復甦，也是植物登陸並覆蓋地表的關鍵時期。我們目前就生活在顯生宙的最後一刻。
-        </span>
-      </>
+      <span className="font-bold text-red-800 block mb-3 text-xl">
+      【元古宙：氧氣大浩劫與雪球地球的試煉】
+      </span>
+      <span className="font-bold text-red-800 block mb-3 text-xl">
+      (The Proterozoic Eon: The Great Oxidation Catastrophe and the Snowball Trials)
+      </span>
+      <span className="block leading-relaxed mb-4">
+      如果說太古宙是細菌們安靜的黏液天堂，那麼 25 億年前開啟的元古宙，就是一場由細菌引發的「全球生化危機」。這一切的始作俑者是一種學會了利用陽光製造能量的小傢伙——「藍綠菌」（Cyanobacteria）。它們進行光合作用，將一種對當時所有生命來說都是劇毒的廢氣排放到海水中，這種氣體就是「氧氣」。起初，這些氧氣被海洋中溶解的鐵離子吸收，生成紅色的鐵鏽沉澱，形成了今天我們開採的「帶狀鐵礦層」（Banded Iron Formations）。 但當海洋中的鐵被耗盡後，氧氣開始溢出到大氣層。這導致了兩大後果：第一，大氣中的甲烷被氧化清除，原本橙色的天空終於變成了我們熟悉的「蔚藍色」；第二，原本適應無氧環境的古老微生物遭遇了滅頂之災，這是地球史上第一場大規模滅絕事件——「大氧化事件」（Great Oxidation Event）。
+      </span>
+      <span className="block leading-relaxed">
+      雖然氧氣殺死了舊生命，但也逼出了更強大的新生命。在元古宙的中期，為了抵禦氧氣的毒性或利用氧氣的高能量，單細胞生命發生了融合，誕生了擁有細胞核的「真核生物」（Eukaryotes）。這是所有現代動植物的共同祖先。然而，元古宙的結尾並不好過。由於溫室氣體（甲烷）被氧氣破壞，地球失去了保暖層，氣溫驟降。在距今約 7 億年前的成冰紀，冰層從兩極一路蔓延到赤道，整顆地球被凍成了一顆白色的雪球，這就是著名的「雪球地球」（Snowball Earth）時期。 生命在厚達數公里的冰層下苟延殘喘了數千萬年，直到火山噴出的二氧化碳再次溫暖地球，才迎來了「埃迪卡拉紀」與生命的復甦。
+      </span>
+      <span className="font-bold text-red-800 block mb-3 text-xl">
+      【科學家的悄悄話】
+      </span>
+      <span className="block leading-relaxed mb-4">
+      「這是一個關於『雙面刃』的故事。元古宙告訴我們：對於太古宙的居民來說，氧氣是毀滅世界的毒氣；但對於我們來說，氧氣是生命之源。我們呼吸的每一口氣，都要感謝 20 億年前那些藍綠菌製造的『污染』。」
+      </span>
+    </>
     ),
     image: 'Proterozoic.jpg',
     
@@ -1164,21 +1173,27 @@ const geologicalData: GeologicalNode[] = [
         englishName: 'Ediacaran',
         start: 635,
         end: 538.8,
-        theme: 'emerald',
+        theme: 'rose',
         description: (
           <>
             <span className="font-bold text-gray-900 block mb-3 text-xl">
-            【新生代：冷卻星球上的哺乳霸業】
+            【埃迪卡拉紀：暴風雨前的寧靜花園】
             </span>
             <span className="font-bold text-gray-900 block mb-3 text-xl">
-            (The Cenozoic Era: The Mammalian Dominance on a Cooling Planet)
+            (The Ediacaran Period: The Quiet Garden Before the Storm)
             </span>
             <span className="block leading-relaxed mb-4">
-            如果說中生代是一場狂熱的「夏日派對」，那麼距今 6600 萬年開啟的新生代，就是派對結束後，地球逐漸將空調溫度調低的「冷靜期」。在恐龍滅絕後的初期，地球依然相當溫暖，但隨著時間推移，一場劇烈的地質運動改變了一切：印度板塊像一輛失控的卡車狠狠撞向歐亞大陸，隆起了雄偉的喜馬拉雅山脈 。這場造山運動加速了岩石風化，大量消耗了大氣中的二氧化碳，導致全球氣溫開始一路下滑。原本覆蓋全球的茂密雨林開始退縮，取而代之的是更加開闊、乾燥且耐寒的「草原生態系」。地球的地貌從單一的綠色叢林，變成了四季分明、冰雪與草原交織的複雜世界，這種環境的劇變迫使生命必須學會適應寒冷與長途遷徙。
+            如果說寒武紀是嘈雜的戰場，那麼距今 6.35 億至 5.41 億年前的埃迪卡拉紀，就是地球最後一段「寧靜的伊甸園」。這個時代始於一場史詩般的氣候復甦——地球剛從長達數千萬年的「雪球地球」（Snowball Earth）冰凍狀態中解凍。隨著冰川融化，大量的營養物質被沖刷進海洋，全球氣溫回暖，淺海中出現了地球歷史上第一批「肉眼可見的複雜生物」——埃迪卡拉生物群（Ediacaran biota）。
             </span>
             <span className="block leading-relaxed">
-            在這個逐漸變冷且視野開闊的新舞台上，生命上演了一場名為「小卒變英雄」的勵志劇。那些曾經在恐龍腳下瑟瑟發抖、體型如老鼠般的哺乳動物，迅速填補了恐龍留下的真空。牠們不再只是躲在地洞裡，而是大膽地走向海洋（演化成鯨魚）、飛向天空（演化成蝙蝠），並奔馳在廣闊的草原上。為了適應草原生活，動物們演化出了更修長的腿（為了逃跑或追捕）和更複雜的社會行為。更有趣的是，草原的出現推動了一種特殊的演化壓力——在沒有樹木遮蔽的開闊地上，「腦力」變得比蠻力更重要。正是在這種環境下，靈長類動物開始直立行走，解放雙手，並最終點燃了智慧的火花。新生代不只是哺乳類的時代，更是智慧生命在嚴酷氣候中磨練成形的關鍵篇章。
+            但不要期待看到你熟悉的魚或蝦。埃迪卡拉紀的海洋就像是一場「前衛藝術展」。這裡的生物長得極其怪異，牠們沒有頭、沒有尾、沒有眼睛、沒有嘴巴，更沒有堅硬的骨骼或外殼。牠們大多是「軟體生物」，有的像巨大的充氣床墊（如狄更遜水母 Dickinsonia），有的像在海底搖曳的羽毛筆（如查恩盤蟲 Charnia），有的像圓盤或甚至像一塊布。牠們靜靜地趴在海床上，或是直立在水中，靠著皮膚直接吸收海水中的營養。這是一個「沒有掠食者」的世界，沒有追逐，沒有殺戮，只有寧靜的濾食與吸收。這是地球生命史上唯一一次，大型生物可以在毫無防備的情況下裸露著柔軟的身體生存。
             </span>
+            <span className="font-bold text-gray-900 block mb-3 text-xl">
+                【科學家的悄悄話】
+             </span>
+             <span className="block leading-relaxed mb-4">
+             「這是一個關於『試錯』的謎題。埃迪卡拉紀告訴我們：生命在找到最佳方案（現代動物結構）之前，曾經嘗試過完全不同的設計圖。許多埃迪卡拉生物可能根本不是我們祖先，而是一群已經徹底滅絕的『失敗實驗品』，或者是地球上曾經存在過的另一種完全不同的生命形式（文德生物）。」
+           </span>
           </>
         ),
         image: 'ediacaran.jpg',
@@ -1227,16 +1242,25 @@ const geologicalData: GeologicalNode[] = [
     theme: 'amber',
     description: (
       <>
-        <span className="font-bold text-gray-900 block mb-3 text-xl">
-          顯著生命的時代：從寒武紀到現代
-        </span>
-        <span className="block leading-relaxed mb-4">
-          「顯生宙」意為「可見的生命」，標誌著複雜多細胞生物大量繁衍的時期。從寒武紀大爆發開始，地球生命形式經歷了爆炸性的多樣化，無脊椎動物、魚類、兩棲類、爬行類、恐龍、鳥類與哺乳動物相繼登上歷史舞台。
-        </span>
-        <span className="block leading-relaxed">
-          這個時期包含了古生代、中生代與新生代，見證了多次生物大滅絕與復甦，也是植物登陸並覆蓋地表的關鍵時期。我們目前就生活在顯生宙的最後一刻。
-        </span>
-      </>
+      <span className="font-bold text-red-800 block mb-3 text-xl">
+      【太古宙：橙色蒼穹下的黏液水世界】
+      </span>
+      <span className="font-bold text-red-800 block mb-3 text-xl">
+      (The Archean Eon: The Slime Water World Under the Orange Dome)
+      </span>
+      <span className="block leading-relaxed mb-4">
+      如果說冥古宙是狂暴的火與石，那麼 40 億年前開啟的太古宙，就是地球冷卻下來後變成的一顆「有毒的水球」。當時的地表幾乎被廣闊的海洋覆蓋，陸地尚未連結成大塊的大陸，只是一串串冒著煙的火山島鏈。最令人震驚的是當時的色調：因為大氣中充滿了甲烷與二氧化碳，卻幾乎沒有氧氣，天空呈現出一種詭異的「霧霾橙色」；而海洋因為富含溶解的鐵離子，不是藍色的，而是像橄欖油一樣的「深綠色」。 這是一個對現代人類來說絕對致命的環境，空氣有毒，且紫外線毫無阻擋地轟炸著地表。
+      </span>
+      <span className="block leading-relaxed">
+      但在這片看似死寂的綠色海洋溫泉邊，發生了宇宙中最偉大的奇蹟——無機分子組成了有機分子，誕生了地球上第一批生命：「單細胞細菌與古菌」。這些最原始的地球居民雖然微小，但它們團結起來的力量驚人。在太古宙的淺海中，無數的微生物分泌出黏液，層層堆疊，建造出了當時地球上唯一的「大城市」——「疊層石」（Stromatolites）。 這些像蘑菇或石墩一樣的微生物礁石遍佈全球海岸線，它們在接下來的十幾億年裡安靜地統治著地球。太古宙是一個「慢動作」的時代，生命雖然已經誕生，但它們僅僅停留在單細胞階段，在黏液與海水中默默地進行著生化實驗，等待著改變大氣成分的那一刻。
+      </span>
+      <span className="font-bold text-red-800 block mb-3 text-xl">
+      【科學家的悄悄話】
+      </span>
+      <span className="block leading-relaxed mb-4">
+      「這是一個關於『時間的耐心』的故事。太古宙持續了整整 15 億年，佔了地球歷史的三分之一。在這漫長的歲月裡，生命似乎『毫無長進』，一直都是細菌。但實際上，它們正在進行最重要的發明：學會如何利用陽光（光合作用）。等到這項技術成熟，它們將釋放出一種危險的廢氣——氧氣，從而徹底毀滅當時的世界，並開啟下一個時代。」
+      </span>
+    </>
     ),
     image: 'Archean.jpg',
     children: []
@@ -1250,16 +1274,25 @@ const geologicalData: GeologicalNode[] = [
     theme: 'violet',
     description: (
       <>
-        <span className="font-bold text-gray-900 block mb-3 text-xl">
-          顯著生命的時代：從寒武紀到現代
-        </span>
-        <span className="block leading-relaxed mb-4">
-          「顯生宙」意為「可見的生命」，標誌著複雜多細胞生物大量繁衍的時期。從寒武紀大爆發開始，地球生命形式經歷了爆炸性的多樣化，無脊椎動物、魚類、兩棲類、爬行類、恐龍、鳥類與哺乳動物相繼登上歷史舞台。
-        </span>
-        <span className="block leading-relaxed">
-          這個時期包含了古生代、中生代與新生代，見證了多次生物大滅絕與復甦，也是植物登陸並覆蓋地表的關鍵時期。我們目前就生活在顯生宙的最後一刻。
-        </span>
-      </>
+      <span className="font-bold text-red-800 block mb-3 text-xl">
+      【冥古宙：煉獄般的熔岩創世紀與月球誕生】
+      </span>
+      <span className="font-bold text-red-800 block mb-3 text-xl">
+      (The Hadean Eon: The Hellish Genesis and the Birth of the Moon)
+      </span>
+      <span className="block leading-relaxed mb-4">
+      如果說顯生宙是熱鬧的生命舞台，那麼 46 億年前開啟的冥古宙（名稱源自希臘神話的冥王 Hades），就是這座舞台正在搭建時的「熔煉工廠」。地球剛從太陽星雲的塵埃中吸積成形，地表完全沒有固態岩石，只有翻騰不休的「岩漿海」（Magma Ocean），溫度高達數千度。當時的天空不是藍色的，而是被硫磺與火山灰籠罩的黑紅色，空氣中沒有氧氣，充滿了令人窒息的二氧化碳與氮氣。最可怕的是，當時的太陽系還很年輕，太空中充滿了失控的小行星，地球每天都在承受「重轟炸」（Heavy Bombardment），每顆撞擊地球的隕石都像核彈一樣，激起千米高的岩漿巨浪。
+      </span>
+      <span className="block leading-relaxed">
+      然而，冥古宙發生了一件決定地球命運的「超級意外」。大約 45 億年前，一顆火星大小的原行星「特伊亞」（Theia），以一種毀滅性的角度撞上了地球。這場撞擊幾乎將地球撞碎，巨大的能量將地殼熔化並拋入太空。奇蹟發生了：這些被拋出的碎片並沒有飛走，而是在引力作用下迅速凝聚，形成了我們今天的「月球」。 有了月球的引力牽引，地球原本瘋狂的自轉速度開始變慢（當時的一天可能只有 6 小時），地軸也因此穩定下來，這為未來生命的四季輪迴奠定了基礎。隨著冥古宙末期，地表溫度終於降到水的沸點以下，大氣中的水蒸氣凝結成了一場持續數百萬年的「超級暴雨」，最終匯聚成了原始海洋，將地球從一顆火球變成了一顆水球。
+      </span>
+      <span className="font-bold text-red-800 block mb-3 text-xl">
+      【科學家的悄悄話】
+      </span>
+      <span className="block leading-relaxed mb-4">
+      「這是一個關於『毀滅即創造』的啟示。冥古宙幾乎沒有留下任何岩石紀錄，因為地殼都被重融了。唯一的倖存者是一種極其堅硬的微小晶體——『鋯石』（Zircon）。這些比沙粒還小的時光膠囊告訴我們：早在 44 億年前，地球表面可能就已經冷卻並出現液態水了。地獄（Hadean）冷卻的速度，比我們想像的還要快。」
+      </span>
+    </>
     ),
     image: 'Hadean.jpg',
     children: []
