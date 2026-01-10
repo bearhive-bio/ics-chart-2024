@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { 
   ChevronDown, 
   ChevronRight, 
@@ -33,7 +33,6 @@ interface GeologicalNode {
   desc?: string | React.ReactNode;
 }
 
-// [修正 1] 確保介面支援 objectFit 屬性
 interface SmartImageProps {
   src: string;
   alt: string;
@@ -1308,10 +1307,8 @@ const geologicalData: GeologicalNode[] = [
   }
 ];
 
-// Helper: 遞迴尋找單位及其關係
 // --- Components ---
 
-// [修正 2] 實作 SmartImage 的 objectFit 邏輯
 const SmartImage: React.FC<SmartImageProps> = ({ src, alt, className, fallbackColor, type, objectFit = 'cover' }) => {
   const [error, setError] = useState(false);
   const imagePath = `/images/${src}`;
@@ -1337,7 +1334,6 @@ const SmartImage: React.FC<SmartImageProps> = ({ src, alt, className, fallbackCo
     <img 
       src={imagePath} 
       alt={alt} 
-      // 關鍵修改：將 objectFit 應用到 class 中，object-contain 會保持比例並留白
       className={`${className} object-${objectFit}`}
       onError={() => setError(true)}
     />
@@ -1492,13 +1488,11 @@ const DetailPanel: React.FC<DetailPanelProps> = ({ unit, onClose, onNavigate }) 
         <div className="flex flex-col md:flex-row flex-1 overflow-hidden h-full">
           
           {/* Left: Image Area */}
-          {/* [修正 3] 將背景色改為 bg-black (全黑)，配合 contain 模式就會出現黑邊 */}
           <div className="w-full md:w-2/3 h-48 md:h-full relative bg-black flex-shrink-0 border-r border-gray-200">
             <SmartImage 
               src={unit.image} 
               alt={unit.name} 
               className="w-full h-full"
-              // [修正 4] 指定 objectFit="contain" 來顯示完整圖片不裁切、不變形
               objectFit="contain"
               fallbackColor={colors.bg}
               type={unit.type}
@@ -1532,7 +1526,8 @@ const DetailPanel: React.FC<DetailPanelProps> = ({ unit, onClose, onNavigate }) 
                 
                 {/* 2-A. Description */}
                 <div className="flex-1 overflow-y-auto p-5 border-b-4 border-gray-100 relative">
-                    <div className="sticky top-0 bg-white/95 backdrop-blur-sm pb-2 mb-2 border-b border-dashed border-gray-100 z-10 flex items-center gap-2 text-gray-400">
+                    {/* [修正] 移除 sticky top-0，改為一般 div，現在它會跟著文字一起捲動 */}
+                    <div className="pb-2 mb-2 border-b border-dashed border-gray-100 flex items-center gap-2 text-gray-400">
                         <BookOpen size={14}/> 
                         <span className="text-xs font-bold uppercase tracking-wider">{(isExtinction || isExplosion) ? '事件描述' : '時期特徵'}</span>
                     </div>
@@ -1544,7 +1539,8 @@ const DetailPanel: React.FC<DetailPanelProps> = ({ unit, onClose, onNavigate }) 
                 {/* 2-B. Children List */}
                 {unit.children && unit.children.length > 0 ? (
                     <div className="flex-1 overflow-y-auto p-5 bg-gray-50 relative">
-                        <div className="sticky top-0 bg-gray-50/95 backdrop-blur-sm pb-2 mb-4 border-b border-dashed border-gray-200 z-10 flex items-center justify-between text-gray-400">
+                        {/* [修正] 移除 sticky top-0，讓列表標題也跟著一起捲動 */}
+                        <div className="pb-2 mb-4 border-b border-dashed border-gray-200 flex items-center justify-between text-gray-400">
                            <div className="flex items-center gap-2">
                               <Layers size={14} />
                               <span className="text-xs font-bold uppercase tracking-wider">下分層級</span>
@@ -1706,6 +1702,10 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ data, depth = 0, onSelect, 
 
 export default function App() {
   const [selectedUnit, setSelectedUnit] = useState<GeologicalNode | null>(null);
+
+  useEffect(() => {
+    document.title = "地球歷史畫廊";
+  }, []);
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-gray-900 pb-20">
