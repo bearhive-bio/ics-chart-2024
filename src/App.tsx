@@ -221,6 +221,9 @@ const geologicalData: GeologicalNode[] = [
                 (The Phanerozoic Eon: The Grand Stage where Life Became Visible)
                 </span>
                 <span className="block leading-relaxed mb-4">
+                由來：Phaneros (可見/顯著) + Zoe (生命)，意指「肉眼可見的生命」。由美國地質學家喬治•查德維克（George Halcott Chadwick，1876~1953）在1930年提出[1][2]。當時因為化石記錄和考古年代測定技術的限制，學術界普遍認為地球上的生命全部是在寒武紀大爆發中才開始「顯現」，因而得名。
+                </span>
+                <span className="block leading-relaxed mb-4">
                 如果說前寒武紀是地球漫長而沈悶的「黑白默片」，那麼 5.41 億年前開啟的顯生宙，就是一場色彩斑斕、音效震撼的「4K 全彩史詩電影」。「顯生」（Phanerozoic）意為「可見的生命」，這標誌著地球終於告別了肉眼看不見的微生物時代，迎來了複雜生命的爆發。這一切始於寒武紀海洋中的一場「骨骼革命」，生物學會了利用礦物質製造硬殼與脊椎，從此在化石紀錄中留下了清晰的痕跡。隨後，生命不再滿足於海洋，而是發起了史上最偉大的「登陸諾曼第」——綠色植物率先染綠了荒蕪的岩石，昆蟲與兩棲類緊隨其後。在顯生宙的推動下，地球從一顆死寂的紅灰色岩石行星，轉變成了一顆藍綠交織、充滿呼吸與心跳的「活體星球」。
                 </span>
                 <span className="block leading-relaxed">
@@ -283,6 +286,9 @@ const geologicalData: GeologicalNode[] = [
             (The Cenozoic Era: The Mammalian Dominance on a Cooling Planet)
             </span>
             <span className="block leading-relaxed mb-4">
+            由來：「越來越新」系列—希臘文的比較級遊戲。新生代的命名邏輯變了。地質學家萊爾（Charles Lyell）為了區分地層的年輕程度，用希臘文的後綴來表示「現代物種（貝類）在化石中的比例」。字根 -cene 來自希臘文 Kainos (新)。
+            </span>
+            <span className="block leading-relaxed mb-4">
             如果說中生代是一場狂熱的「夏日派對」，那麼距今 6600 萬年開啟的新生代，就是派對結束後，地球逐漸將空調溫度調低的「冷靜期」。在恐龍滅絕後的初期，地球依然相當溫暖，但隨著時間推移，一場劇烈的地質運動改變了一切：印度板塊像一輛失控的卡車狠狠撞向歐亞大陸，隆起了雄偉的喜馬拉雅山脈 。這場造山運動加速了岩石風化，大量消耗了大氣中的二氧化碳，導致全球氣溫開始一路下滑。原本覆蓋全球的茂密雨林開始退縮，取而代之的是更加開闊、乾燥且耐寒的「草原生態系」。地球的地貌從單一的綠色叢林，變成了四季分明、冰雪與草原交織的複雜世界，這種環境的劇變迫使生命必須學會適應寒冷與長途遷徙。
             </span>
             <span className="block leading-relaxed">
@@ -311,6 +317,9 @@ const geologicalData: GeologicalNode[] = [
                 </span>
                 <span className="font-bold text-gray-900 block mb-3 text-xl">
                 (The Quaternary Period: The Glacial Cycles and the Final Chapter of Human Coronation)
+                </span>
+                <span className="block leading-relaxed mb-4">
+                由來：這是一個歷史遺留名詞。早期的地質學家把地球岩石分為四類：第一紀（已廢棄）、第二紀（已廢棄）、第三紀（Tertiary，曾用來指古近紀+新近紀，現已逐漸廢棄）、第四紀。只有「第四紀」這個名字因為太好用（代表人出現之後的時代）被保留了下來。
                 </span>
                 <span className="block leading-relaxed mb-4">
                 如果說新近紀是地球逐漸變冷的「前奏曲」，那麼距今 258 萬年前開啟的第四紀，就是樂章進入了最激昂、節奏最快的「變奏震盪期」。這個時期的地球就像是一台接觸不良的冰箱，不斷在「極凍模式」（冰期）與「解凍模式」（間冰期）之間劇烈切換。這種前所未有的氣候脈動，重塑了地球的表面——巨大的冰原像推土機一樣反覆輾過北半球，切削出峽灣與湖泊（如五大湖），並透過海平面的升降，時而將大陸連接起來（陸橋），時而又將它們隔絕成島嶼。這是一個「邊界不斷流動」的時代，劇變的環境迫使生態系必須保持高度的彈性，無法適應快速變化的物種（如許多特化的森林古獸）迅速被淘汰。
@@ -344,6 +353,9 @@ const geologicalData: GeologicalNode[] = [
                      (The Holocene Epoch: The Golden Thermal Window of Budding Civilizations)
                      </span>
                      <span className="block leading-relaxed mb-4">
+                     由來：Holos (完全/全部) + Cene (新)。「完全」的新時期（就是現在）。
+                     </span>
+                     <span className="block leading-relaxed mb-4">
                      如果說更新世是一場忽冷忽熱的「氣候雲霄飛車」，那麼 11,700 年前開啟的全新世，就是雲霄飛車終於停靠在月台後的「寧靜時刻」。隨著最後一次冰期結束，全球氣溫回暖並驚人地維持在一種「異常穩定」的狀態。那些曾經覆蓋北半球的巨大冰蓋融化，融水導致海平面上升，淹沒了白令陸橋與古海岸線，將世界地圖定格成了我們今天熟悉的模樣——各大洲被海洋隔開，形成了現代的島嶼與海峽。 這種穩定的氣候就像是為地球按下了一個「恆溫鍵」，季節變化變得規律且可預測。原本為了躲避寒風而不斷遷徙的人類祖先，第一次發現他們可以信任明年的天氣，這種信任感成為了這顆星球上最偉大變革的基石。
                       </span>
                       <span className="block leading-relaxed">
@@ -372,6 +384,9 @@ const geologicalData: GeologicalNode[] = [
                      </span>
                      <span className="font-bold text-gray-900 block mb-3 text-xl">
                      (The Pleistocene Epoch: The Glacial Cycles and the Killing Fields of the Ice Age)
+                     </span>
+                     <span className="block leading-relaxed mb-4">
+                     由來：Pleistos (最多) + Cene (新)。「最多」的新時期（絕大多數都是現代物種了）。
                      </span>
                      <span className="block leading-relaxed mb-4">
                      如果說之前的時代是地球氣候的「單向演變」，那麼 258 萬年前開啟的更新世，就是地球陷入了一種瘋狂的「忽冷忽熱循環模式」。受地球軌道變化（米蘭科維奇循環）的影響，巨大的冰蓋像呼吸一樣，在北半球反覆擴張與退縮了數十次。最冷的時候，地球 30% 的陸地被數公里厚的冰層覆蓋，海平面下降了 100 多公尺。這看似災難，卻意外地為生命搭建了最重要的「全球高速公路」：下降的海水位讓大陸棚裸露出來，白令海峽變成了「白令陸橋」（Beringia），將亞洲與美洲連為一體；印尼群島連成了「巽他古陸」。 這是一個寒冷但邊界消失的世界，只要你耐得住凍，你就可以徒步走到地球的任何角落。
@@ -405,6 +420,9 @@ const geologicalData: GeologicalNode[] = [
                 (The Neogene Period: The Reshaping of Modern Facade and the Rise of Grassland Empires)
                 </span>
                 <span className="block leading-relaxed mb-4">
+                由來：「新」是neo-的意譯，「近」則是-gene的音譯，兼顧了字面意義。
+                </span>
+                <span className="block leading-relaxed mb-4">
                 如果說古近紀是地球的一場「復古熱帶派對」，那麼距今 2,300 萬年到 258 萬年前的新近紀，就是派對散場後，地球開始進行嚴肅裝修的「現代化工程」。這個時期的主旋律是「乾燥與變冷」。隨著喜馬拉雅山與安地斯山脈的劇烈隆起，大氣環流被阻斷，昔日覆蓋全球的溫暖雨林被迫退守赤道。取而代之的是一種更強勢、更耐旱的霸主——「禾本科植物」（草）。這股綠色浪潮席捲了所有大陸，創造出了前所未有的廣闊「疏林草原」。這種地貌的改變迫使生物界進行了一次徹底的「系統更新」：森林裡的古老獸類退場，演化出了擅長奔跑的馬、長著複雜牙齒的食草動物，以及為了適應開闊地而嘗試直立行走的靈長類。我們今天在動物園看到的獅子、大象、斑馬等「現代動物群」，基本上都是在這個時期定型的。
                 </span>
                 <span className="block leading-relaxed">
@@ -435,6 +453,9 @@ const geologicalData: GeologicalNode[] = [
                     (The Pliocene Epoch: The Cold Prelude of Unified Americas and the Year One of Upright Walking)
                     </span>
                     <span className="block leading-relaxed mb-4">
+                    由來：Pleion (更多) + Cene (新)。「更多」的新時期（現代物種變多了）。
+                    </span>
+                    <span className="block leading-relaxed mb-4">
                     如果說中新世是廣闊草原的鋪墊，那麼 533 萬年前開啟的上新世，就是地球地理格局完成最後拼圖的「造橋時刻」。這個時期最震撼的地質事件，莫過於「巴拿馬地峽」的升起——原本分開的南美洲與北美洲終於「牽手」成功。這座地質橋樑的連通，引發了史詩般的「南北美洲生物大遷徙」（Great American Interchange）：北方的熊與劍齒虎南下屠殺，南方的巨大地懶與犰狳北上探險。然而，這座陸橋更深遠的影響在於它切斷了熱帶洋流，迫使溫暖的墨西哥灣流轉向北大西洋，帶去了大量水氣。這些水氣在高緯度地區凝結成雪，導致格陵蘭冰蓋開始形成，地球的空調被正式鎖定在「製冷模式」，為即將到來的冰河時期做好了物理準備。
                     </span>
                     <span className="block leading-relaxed">
@@ -463,6 +484,9 @@ const geologicalData: GeologicalNode[] = [
                     </span>
                     <span className="font-bold text-gray-900 block mb-3 text-xl">
                     (The Miocene Epoch: The Empire of Grasslands and the Golden Age of Apes)
+                    </span>
+                    <span className="block leading-relaxed mb-4">
+                    由來：Meion (較少) + Cene (新)。「較少」的新時期（比現代少，但比之前多）。
                     </span>
                     <span className="block leading-relaxed mb-4">
                     如果說漸新世是森林退縮的序曲，那麼 2,300 萬年前開啟的中新世，就是地球正式被「綠色海洋」淹沒的時代。這裡說的不是海水，而是席捲全球的「禾本科植物」（草）。隨著氣候進一步變得乾燥與季節性分明，茂密的森林再也無法維持統治，取而代之的是一望無際、隨風起伏的「疏林草原」（Savanna）。 這看似簡單的景觀改變，實則是對動物界的一場殘酷考驗。草雖然豐富，但含有堅硬的「矽質體」，吃它就像在咀嚼砂紙。這迫使草食動物進行了一場牙齒與消化系統的「軍備競賽」——馬的牙齒變得更長更耐磨，體型也為了在開闊地上逃跑而變得更大、腿更長。這是一個視野開闊、塵土飛揚，充滿了奔跑與追逐的新世界。
@@ -496,6 +520,9 @@ const geologicalData: GeologicalNode[] = [
                 (The Paleogene Period: The Tropical Greenhouse of Mammalian Wild Experiments)
                 </span>
                 <span className="block leading-relaxed mb-4">
+                由來：「古」是paleo-的意譯，「近」則是-gene的音譯，兼顧了字面意義。
+                </span>
+                <span className="block leading-relaxed mb-4">
                 如果說 K-Pg 大滅絕是一次將電腦強制關機的黑畫面，那麼 6600 萬年前開啟的古近紀，就是系統重啟後運作過熱的「超級運算期」。你可能以為恐龍死後地球會一直冷冰冰，錯了！在經歷了短暫的核子冬天後，地球氣候發生了報復性的反彈，甚至一度飆升至比現在高十幾度的「極熱極大值」（PETM）。當時的地球就像是一個悶熱潮濕的「全球植物園」，連南極洲都長滿了棕櫚樹與鱷魚，兩極完全沒有冰雪。 這種極致的溫室環境，雖然讓海平面居高不下，但也創造了無比豐富的食物來源，茂密的雨林幾乎覆蓋了每一寸陸地，為那些剛從地洞裡鑽出來的倖存者們，準備好了最豐盛的自助餐。
                 </span>
                 <span className="block leading-relaxed">
@@ -525,6 +552,9 @@ const geologicalData: GeologicalNode[] = [
                     </span>
                     <span className="font-bold text-gray-900 block mb-3 text-xl">
                     (The Oligocene Epoch: The Antarctic Freeze and the Cold March of Giants)
+                    </span>
+                    <span className="block leading-relaxed mb-4">
+                    由來：Oligos (少) + Cene (新)。「少數」的新時期（現代物種佔少數）。
                     </span>
                     <span className="block leading-relaxed mb-4">
                     如果說始新世是地球發燒的「熱帶桑拿」，那麼 3,390 萬年前開啟的漸新世，就是一場突如其來的「冰桶挑戰」。這一切的導火線源於南半球的一次地質分手：南美洲終於徹底斷開了與南極洲的最後連結，導致「德雷克海峽」（Drake Passage）被打通。這讓強勁的「南極繞極流」得以形成，它像一道冰冷的結界，將南極洲孤立在冷氣團中，導致地球南端覆蓋上了第一層永久性的厚重冰蓋。 這台天然的「巨型冷氣機」啟動後，全球氣溫驟降，海平面大幅退縮。曾經覆蓋全球的茂密雨林被迫撤退回赤道附近，取而代之的是溫帶落葉林與更加開闊、乾燥的「疏林草原」。地球的色調從深綠變成了褐黃，季節變得更加分明，原本唾手可得的食物變得稀缺且堅硬。
@@ -557,6 +587,9 @@ const geologicalData: GeologicalNode[] = [
                     (The Eocene Epoch: The Mammalian Golden Age in the Hyper-Thermal Rainforest)
                     </span>
                     <span className="block leading-relaxed mb-4">
+                    由來：Eos (黎明) + Cene (新)。「黎明般」的新時期（現代物種初現曙光）。
+                    </span>
+                    <span className="block leading-relaxed mb-4">
                     如果說古新世是災後的「創傷復原室」，那麼 5,600 萬年前開啟的始新世，就是地球把恆溫器轉到爆表的「極限桑拿房」。這一切始於一場神秘的碳排放事件（PETM，古新世—始新世極熱事件），大氣中的溫室氣體激增，導致全球氣溫飆升至現代無法想像的高度。這時的地球是一個真正的「無冰世界」：從赤道到北極，地表完全被茂密的熱帶雨林覆蓋。如果你當時站在南極洲，你看到的不是冰雪，而是搖曳的棕櫚樹和像河馬一樣的動物在溫暖的沼澤中打滾。 這是一個濕熱、擁擠且能量過剩的綠色迷宮，高溫加速了植物的生長，也為動物提供了源源不絕的食物動力，將地球推向了生物多樣性的高峰。
                     </span>
                     <span className="block leading-relaxed">
@@ -585,6 +618,9 @@ const geologicalData: GeologicalNode[] = [
                     </span>
                     <span className="font-bold text-gray-900 block mb-3 text-xl">
                     (The Paleocene Epoch: The Fern Spike Recovery and Dawn of Survivors)
+                    </span>
+                    <span className="block leading-relaxed mb-4">
+                    由來：Paleo (古) + Cene (新)。「古老的」新時期（現代物種還很少）。
                     </span>
                     <span className="block leading-relaxed mb-4">
                     如果說 K-Pg 大滅絕是地球心跳驟停的瞬間，那麼緊接而來的古新世，就是地球在加護病房中「甦醒與癒合」的關鍵時刻。當撞擊造成的塵埃落定，陽光重新穿透大氣，首先接管這個灰色世界的並不是森林，而是生命力極強的「蕨類植物」（Fern Spike）。 地質紀錄顯示，當時的災後地表幾乎被單一的蕨類綠海覆蓋，它們像是一層巨大的繃帶，包裹住燒焦的大陸。隨著氣候迅速回暖，地球從「核子冬天」擺盪回「溫室狀態」，茂密的亞熱帶叢林開始瘋狂生長，甚至延伸到了極圈。這時的森林與現代不同，鬱閉度極高，幽暗且潮濕，像是一個巨大的、蒸氣瀰漫的培養皿，正在靜靜地修復著破碎的生態鏈。
@@ -651,6 +687,9 @@ const geologicalData: GeologicalNode[] = [
             (The Mesozoic Era: The Tropical Empire of Giants and Continental Rifts)
             </span>
             <span className="block leading-relaxed mb-4">
+            由來：「岩石特徵與山脈」系列—德法瑞邊境的岩層。到了中生代，命名的焦點轉移到了歐洲大陸（德國、法國、瑞士）。
+            </span>
+            <span className="block leading-relaxed mb-4">
             如果將地球歷史比作一棟房子，古生代是在打地基，而距今 2.5 億年到 6600 萬年前的中生代，則是地球進行最奢華裝修的「豪宅擴建期」。這個時代的地球地形發生了劇變，原本黏在一起的「盤古大陸」開始像一塊被剝開的巨大餅乾，分裂成我們今天熟悉的各個大洲。 這個漫長的「撕裂過程」雖然引發了無數火山與地震，卻也創造出了綿延的海岸線與新生的海洋（如大西洋的誕生）。更重要的是，中生代的地球是一個「超級溫室」——兩極完全沒有冰帽覆蓋，海平面高漲，溫暖潮濕的氣候從赤道一路延伸到高緯度地區。這種全球性的「恆溫泳池」環境，讓地球變成了一個巨大的熱帶叢林，為巨型生物的登場鋪好了紅地毯。
             </span>
             <span className="block leading-relaxed">
@@ -679,6 +718,9 @@ const geologicalData: GeologicalNode[] = [
                 </span>
                 <span className="font-bold text-gray-900 block mb-3 text-xl">
                 (The Cretaceous Period: The Blooming Golden Age of Fragmented Continents)
+                </span>
+                <span className="block leading-relaxed mb-4">
+                由來：拉丁文 Creta (白堊/粉筆)。這個時期的地層沉積了大量微小生物殼體形成的白色岩石（如著名的英國多佛白堊斷崖）。
                 </span>
                 <span className="block leading-relaxed mb-4">
                 如果說侏羅紀是一個統一的「綠色帝國」，那麼 1.45 億年前開啟的白堊紀，就是一個百家爭鳴的「列國時代」。此時的盤古大陸已經徹底分崩離析，南美洲與非洲像一對分手的戀人越離越遠，中間隔著越來越寬的大西洋。劇烈的海底火山活動推高了洋底，導致全球海平面上升到地質史上的巔峰，現今許多陸地（如北美大平原、歐洲）在當時都成了溫暖的「淺海與群島」。 這種地理隔離就像是把生物關進了不同的「獨立實驗室」，讓各個大陸演化出了截然不同的恐龍家族（例如北美的霸王龍與三角龍，南方的阿貝力龍）。此外，這些廣闊的溫暖淺海滋養了無數微小的浮游生物，牠們死後的骨骼沉積海底，形成了厚厚的白色白堊層（Chalk），這正是這個地質年代名稱的由來。
@@ -710,6 +752,9 @@ const geologicalData: GeologicalNode[] = [
                 </span>
                 <span className="font-bold text-gray-900 block mb-3 text-xl">
                 (The Jurassic Period: The Humid Eden of the Splitting Continent)
+                </span>
+                <span className="block leading-relaxed mb-4">
+                由來：Jura Mountains (侏羅山脈)。來自法國與瑞士邊境的侏羅山脈，那裡有大量該時期的石灰岩。
                 </span>
                 <span className="block leading-relaxed mb-4">
                 如果說三疊紀是一場發生在紅色荒漠裡的「飢餓遊戲」，那麼 2.01 億年前開啟的侏羅紀，就是一場物資無限供應的「吃到飽盛宴」。這一切的轉變，源於地球地理格局的根本性崩解——那塊巨大的「盤古大陸」終於承受不住內部的張力，開始像一塊被剝開的餅乾一樣四分五裂。大西洋的裂口被撕開，海水湧入大陸內部，原本被陸地鎖住的乾燥內陸終於迎來了來自海洋的濕潤水氣。於是，曾經焦黃的地球迅速轉綠，變成了一個溫暖、潮濕且沒有冰河的「超級溫室」。 放眼望去，不再是貧瘠的沙礫，而是由巨大的裸子植物（如松柏、蘇鐵、銀杏）所構成的綠色海洋。這個恆溫且多雨的環境，就像是將地球空調設定在最舒適的「熱帶模式」，為生命的爆發性增長提供了最完美的物理條件。
@@ -771,6 +816,9 @@ const geologicalData: GeologicalNode[] = [
                 </span>
                 <span className="font-bold text-gray-900 block mb-3 text-xl">
                 (The Triassic Period: The Scorched Wasteland of Resurrection)
+                </span>
+                <span className="block leading-relaxed mb-4">
+                由來：拉丁文 Trias (數字 3)。當時在德國發現這個地層有明顯的「三層結構」（紅砂岩、石灰岩、頁岩），故名三疊。
                 </span>
                 <span className="block leading-relaxed mb-4">
                 如果說二疊紀的結尾是地球歷史上最黑暗的「滅絕午夜」，那麼 2.52 億年前開啟的三疊紀，就是在那片廢墟上緩緩升起的「殘酷黎明」。當時的地球依然維持著「盤古大陸」的聚合狀態，這塊巨大的陸地像是一個巨大的屏障，阻擋了海洋濕氣的進入。因此，三疊紀早期的陸地景觀並非我們想像中的恐龍樂園，而是一片廣袤無邊、甚至比撒哈拉更乾燥的「超級紅色荒漠」。 氣候炎熱乾燥，兩極依然沒有冰帽，地球就像是一個散熱不良的「烤爐」。唯有在大陸邊緣，存在著一種被稱為「超級季風」（Megamonsoon）的劇烈氣候現象——雨季時暴雨如注，旱季時滴水未進。這種極端不穩定的氣候，將地球變成了一個對生命極度不友善、稍有不慎就會脫水而死的嚴酷競技場。
@@ -837,6 +885,9 @@ const geologicalData: GeologicalNode[] = [
             (The Paleozoic Era: The Epic Pioneering from Deep Blue to Emerald Green)
             </span>
             <span className="block leading-relaxed mb-4">
+            由來：「英國地理與部落」系列—19 世紀英國地質學家的後花園。你會發現這裡充滿了英國的地名，因為當時英國的地質學家正在瘋狂地研究自家地層。
+            </span>
+            <span className="block leading-relaxed mb-4">
             如果將地球的歷史濃縮成一部電影，那麼跨越近 3 億年的古生代，絕對是場景變化最劇烈的「極限改造王」特輯。故事的開端（約 5.4 億年前），地球看起來還像是火星的孿生兄弟——陸地是一片赤紅的荒漠，所有精彩的生命都蜷縮在藍色的海洋裡。然而，隨著時間推移，這顆星球經歷了地質史上最瘋狂的板塊舞蹈：大陸分分合合，最終撞擊成巨大的「盤古大陸」。 與此同時，大氣層也經歷了翻天覆地的重組，氧氣濃度從稀薄一路飆升到「醉氧」的高峰。這不僅僅是歲月的流逝，而是一場物理與化學環境的「全面地球化工程」，將原本只有岩石與海水的單調世界，一步步改造成擁有森林、河流與複雜氣候系統的宜居星球。
             </span>
             <span className="block leading-relaxed">
@@ -865,6 +916,9 @@ const geologicalData: GeologicalNode[] = [
                 </span>
                 <span className="font-bold text-gray-900 block mb-3 text-xl">
                 (The Permian Period: The Scorching Endurance Test of Pangea)
+                </span>
+                <span className="block leading-relaxed mb-4">
+                由來：Perm (佩爾姆)，這是少數的例外，來自俄羅斯的佩爾姆地區（Perm），由蘇格蘭地質學家莫奇森命名。中文譯名「二疊紀」的來源是在德國的同年代地層的上層是鎂質灰岩，下層是紅色砂岩之故。
                 </span>
                 <span className="block leading-relaxed mb-4">
                 如果說之前的石炭紀是地球的一場「蒸汽桑拿浴」，那麼 2.99 億年前開啟的二疊紀，就是將這場桑拿突然關掉，換成了一個巨大的「乾燥烤箱」。這一切源於地質史上最驚人的一次「強制合併」——地球上所有的陸塊終於撞在一起，形成了唯一的超級大陸：「盤古大陸」（Pangea）。這塊大陸大得難以想像，導致了一個致命的後果：來自海洋的水氣根本無法到達廣闊的內陸。於是，石炭紀那些鬱鬱蔥蔥的濕地雨林崩潰了，取而代之的是一望無際的紅色沙漠與季節性的劇烈季風（超級季風）。對於那些習慣了皮膚濕潤、依賴水窪繁殖的兩棲類來說，這就像是原本住在豪華泳池別墅，突然被丟進了撒哈拉沙漠，生存空間被極度壓縮。
@@ -896,6 +950,9 @@ const geologicalData: GeologicalNode[] = [
                 </span>
                 <span className="font-bold text-gray-900 block mb-3 text-xl">
                 (The Carboniferous Period: The Hyper-Oxygenated Misty Forest of Giants)
+                </span>
+                <span className="block leading-relaxed mb-4">
+                由來：拉丁文 Carbo (煤) + Ferous (攜帶)，意為「含煤的」。因為這時期的地層富含煤炭（工業革命的燃料）。石炭紀是第一個不以其研究岩層的所在地命名的地質時期。
                 </span>
                 <span className="block leading-relaxed mb-4">
                 如果說泥盆紀是地球的「綠化工程」，那麼 3.59 億年前的石炭紀，就是這項工程失控後形成的「全球蒸氣桑拿房」。當時的大陸板塊正緩慢地聚集成盤古大陸，廣闊的低地形成了無邊無際的熱帶沼澤濕地。這裡的景象與現代森林截然不同，你看不到熟悉的橡樹或松樹，取而代之的是高達 40 公尺的「鱗木」與「封印木」。這些像是巨大綠色電線桿的蕨類植物密集排列，遮蔽了天空，地表永遠瀰漫著濃霧與腐植質的氣味。這是一個極度潮濕、悶熱且暗無天日的環境，就像是一個沒有出口的巨型溫室，植物的生長速度快得驚人，將地球變成了一顆鬱鬱蔥蔥的「綠色毛球」。
@@ -959,6 +1016,9 @@ const geologicalData: GeologicalNode[] = [
                 (The Devonian Period: The Greening of Earth and the Armored Arms Race)
                 </span>
                 <span className="block leading-relaxed mb-4">
+                由來：Devon (德文郡)，來自英國西南部的德文郡（Devonshire），那裡有泥盆紀地質典型的紅色砂岩。中文名稱源自舊時日本人使用漢字音讀的音譯名「泥盆紀」。
+                </span>
+                <span className="block leading-relaxed mb-4">
                 如果說寒武紀是生命的「試水溫」，那麼 4.19 億年前的泥盆紀，就是地球史上最浩大的「景觀改造工程」。在此之前，陸地是一片褐色的荒原，但在泥盆紀，地球第一次穿上了「綠色外衣」。植物不再滿足於趴在地上當苔蘚，它們演化出了堅硬的木質素和深根，挺直腰桿變成了高大的樹木（如古蕨類），組成了地球上第一座真正的森林。 這時的空氣中瀰漫著前所未有的清新氧氣，原本死寂的內陸開始充滿生機。這不僅僅是視覺上的綠化，更是大氣層的徹底翻修，植物瘋狂地進行光合作用，將大氣中的氧氣濃度推向新高，為後來巨型動物的登陸備好了充足的「燃料」。
                 </span>
                 <span className="block leading-relaxed">
@@ -988,6 +1048,9 @@ const geologicalData: GeologicalNode[] = [
                 </span>
                 <span className="font-bold text-gray-900 block mb-3 text-xl">
                 (The Silurian Period: The Beachhead of Resurrection and Landfall)
+                </span>
+                <span className="block leading-relaxed mb-4">
+                由來：Silures (志留族)，古羅馬時代另一支居住在威爾斯邊境的凱爾特部落名稱。最早被研究的志留紀岩層采自這個部族在歷史上所定居的傳統區域。中文名則是參考了近代日本學界使用漢字音讀的音譯名「志留利亜紀」。
                 </span>
                 <span className="block leading-relaxed mb-4">
                 如果說奧陶紀的結尾是一場將生命凍結的噩夢，那麼 4.4 億年前開啟的志留紀，就是地球從重症加護病房甦醒後的「復健與回暖」。隨著岡瓦納大陸的冰蓋融化，原本被鎖住的水分重新奔回海洋，讓海平面再次回升，溫暖的淺海重新覆蓋了大陸邊緣。但这时的地球並不安靜，板塊運動劇烈，大陸板塊像慢動作的碰碰車一樣撞在一起（加里東造山運動），隆起了巨大的山脈。這創造出了一個地貌複雜多變的世界：一邊是溫暖平靜的淺海珊瑚礁，另一邊是因碰撞而混濁、充滿沉積物的海灣。這種劇烈的地質活動，雖然讓環境變得不穩定，卻也攪動了營養物質，為倖存的海洋生物提供了豐富的「災後重建資金」。
@@ -1051,6 +1114,9 @@ const geologicalData: GeologicalNode[] = [
                 (The Ordovician Period: The Fully Activated Underwater Metropolis)
                 </span>
                 <span className="block leading-relaxed mb-4">
+                由來：Ordovices (奧陶维斯族)，古羅馬時代居住在威爾斯的一支凱爾特部落名稱。最早被研究的奧陶紀岩層取自於這個部族歷史上的傳統住地而得名。
+                </span>
+                <span className="block leading-relaxed mb-4">
                 如果說寒武紀是生命這場戲的「首映之夜」，那麼緊接而來的奧陶紀（距今約 4.85 億年），就是票房大賣後的「全面擴張期」。這時的地球是一個徹頭徹尾的「超級水世界」。由於氣候異常溫暖，兩極沒有冰帽，海平面上升到了古生代的最高點。海水不再只是輕拍海岸，而是大膽地入侵內陸，將原本廣闊的陸地變成了無數星羅棋布的淺海與群島。如果你當時能從外太空俯瞰地球，你會發現那標誌性的藍色幾乎佔據了所有視野，陸地反倒成了點綴其中的島嶼。這片無邊無際、陽光穿透的淺海，成為了孕育多樣性的超級溫床，其規模之大，是現代海洋完全無法比擬的。
                 </span>
                 <span className="block leading-relaxed">
@@ -1080,6 +1146,9 @@ const geologicalData: GeologicalNode[] = [
                 </span>
                 <span className="font-bold text-gray-900 block mb-3 text-xl">
                 (The Cambrian Period: The Grand Underwater Theater of Life's Premiere)
+                </span>
+                <span className="block leading-relaxed mb-4">
+                由來：來自於英國威爾斯的古代地名「坎布里亞 Cambria」 (威爾斯的拉丁古名)，最早在英國威爾斯發現該地層。中文譯名則源自舊時日本人使用漢字音讀的音譯名「寒武利亜紀」
                 </span>
                 <span className="block leading-relaxed mb-4">
                 如果說後來的地質年代是熱鬧的叢林或草原，那麼 5.4 億年前的寒武紀，就像是一顆「表裡不一」的奇異星球。如果你當時站在陸地上，你會以為自己登陸了火星——放眼望去只有紅色的岩石與沙礫，沒有一棵樹、一根草，甚至聽不到一聲蟲鳴，死寂得令人發慌。但在這片荒涼的海岸線之外，情況卻截然不同。隨著前一代的超級大陸（羅迪尼亞大陸）崩解，陸塊分散漂移，導致全球海平面大幅上升，淹沒了沿海的低地。這在地球表面創造出了廣闊無邊、陽光充足且溫暖的「淺海大陸棚」。這些淺海就像是為了迎接生命而特製的「巨型恆溫培養皿」，陽光能直射海底，水溫舒適宜人，為生命的繁衍提供了最奢華的物理環境。
@@ -1150,7 +1219,7 @@ const geologicalData: GeologicalNode[] = [
       (The Proterozoic Eon: The Great Oxidation Catastrophe and the Snowball Trials)
       </span>
       <span className="block leading-relaxed mb-4">
-      由來：Proteros (較早) + Zoe (生命)，意指「早期的生命」，當時只有簡單的微生物。
+      由來：Proteros (較早) + Zoe (生命)，意指「早期的生命」。因為其是生命史上奠定生物演化方向的重要時期。最早的內共生、真核生物、多細胞生物和有性繁殖以及最早的原蟲、藻類和動物都出現於元古宙。
       </span>
       <span className="block leading-relaxed mb-4">
       如果說太古宙是細菌們安靜的黏液天堂，那麼 25 億年前開啟的元古宙，就是一場由細菌引發的「全球生化危機」。這一切的始作俑者是一種學會了利用陽光製造能量的小傢伙——「藍綠菌」（Cyanobacteria）。它們進行光合作用，將一種對當時所有生命來說都是劇毒的廢氣排放到海水中，這種氣體就是「氧氣」。起初，這些氧氣被海洋中溶解的鐵離子吸收，生成紅色的鐵鏽沉澱，形成了今天我們開採的「帶狀鐵礦層」（Banded Iron Formations）。 但當海洋中的鐵被耗盡後，氧氣開始溢出到大氣層。這導致了兩大後果：第一，大氣中的甲烷被氧化清除，原本橙色的天空終於變成了我們熟悉的「蔚藍色」；第二，原本適應無氧環境的古老微生物遭遇了滅頂之災，這是地球史上第一場大規模滅絕事件——「大氧化事件」（Great Oxidation Event）。
@@ -1185,6 +1254,9 @@ const geologicalData: GeologicalNode[] = [
             (The Ediacaran Period: The Quiet Garden Before the Storm)
             </span>
             <span className="block leading-relaxed mb-4">
+            由來：來自澳大利亞南部的「埃迪卡拉山」（Ediacara Hills），因為那裡發現了那些神秘的軟體生物化石。
+            </span>
+            <span className="block leading-relaxed mb-4">
             如果說寒武紀是嘈雜的戰場，那麼距今 6.35 億至 5.41 億年前的埃迪卡拉紀，就是地球最後一段「寧靜的伊甸園」。這個時代始於一場史詩般的氣候復甦——地球剛從長達數千萬年的「雪球地球」（Snowball Earth）冰凍狀態中解凍。隨著冰川融化，大量的營養物質被沖刷進海洋，全球氣溫回暖，淺海中出現了地球歷史上第一批「肉眼可見的複雜生物」——埃迪卡拉生物群（Ediacaran biota）。
             </span>
             <span className="block leading-relaxed">
@@ -1215,6 +1287,9 @@ const geologicalData: GeologicalNode[] = [
                 </span>
                 <span className="font-bold text-gray-900 block mb-4 text-xl">
                 (The Avalon Explosion: The Fractal Geometry Experiment in the Deep Sea)
+                </span>
+                <span className="block leading-relaxed mb-4">
+                由來：源於發現了大量埃迪卡拉生物群化石的加拿大紐芬蘭島東南角的阿瓦隆半島（Avalon Peninsula）。
                 </span>
                 <span className="block leading-relaxed">
                 在埃迪卡拉紀的早期，大約 6.35 億年前，地球剛從一場規模較小的冰期（加斯奇厄斯冰期）中解凍。大氣中的氧氣含量出現了微妙的上升，這成為了點燃導火線的火花。在今天加拿大的紐芬蘭（當時還在南半球的深海裡），生命突然跨越了單細胞的門檻，發生了一場「阿瓦隆大爆發」。這場爆發的主角是一群被稱為「蘭吉形類」（Rangeomorphs）的生物。牠們是地球歷史上第一批「巨大且複雜」的生命體，有些甚至能長到 2 公尺長！
@@ -1251,7 +1326,7 @@ const geologicalData: GeologicalNode[] = [
       (The Archean Eon: The Slime Water World Under the Orange Dome)
       </span>
       <span className="block leading-relaxed mb-4">
-      由來：希臘文 Arkhaios (起始/古老)，這是地球岩石和生命紀錄的「最開端」。
+      由來：希臘文 Arkhaios (起始/古老)，這是地球岩石和生命紀錄的「最開端」。若更早的岩石被發現，太古宙的定義即可往更古時代推，冥古宙則會被縮短。
       </span>
       <span className="block leading-relaxed mb-4">
       如果說冥古宙是狂暴的火與石，那麼 40 億年前開啟的太古宙，就是地球冷卻下來後變成的一顆「有毒的水球」。當時的地表幾乎被廣闊的海洋覆蓋，陸地尚未連結成大塊的大陸，只是一串串冒著煙的火山島鏈。最令人震驚的是當時的色調：因為大氣中充滿了甲烷與二氧化碳，卻幾乎沒有氧氣，天空呈現出一種詭異的「霧霾橙色」；而海洋因為富含溶解的鐵離子，不是藍色的，而是像橄欖油一樣的「深綠色」。 這是一個對現代人類來說絕對致命的環境，空氣有毒，且紫外線毫無阻擋地轟炸著地表。
@@ -1286,7 +1361,7 @@ const geologicalData: GeologicalNode[] = [
       (The Hadean Eon: The Hellish Genesis and the Birth of the Moon)
       </span>
       <span className="block leading-relaxed mb-4">
-      由來：希臘神話 Hades (冥王/地獄) ，當時地球如同煉獄，充滿岩漿，像冥界一樣。
+      由來：希臘神話 Hades (冥王/地獄) ，當時地球如同煉獄，充滿岩漿，像冥界一樣。冥古宙原本用於指代比已知最早岩石更早的時期，現存的冥古宙物質極為稀少，主要是來自西澳大利亞Jack Hills地區的顆粒狀鋯石。
       </span>
       <span className="block leading-relaxed mb-4">
       如果說顯生宙是熱鬧的生命舞台，那麼 46 億年前開啟的冥古宙（名稱源自希臘神話的冥王 Hades），就是這座舞台正在搭建時的「熔煉工廠」。地球剛從太陽星雲的塵埃中吸積成形，地表完全沒有固態岩石，只有翻騰不休的「岩漿海」（Magma Ocean），溫度高達數千度。當時的天空不是藍色的，而是被硫磺與火山灰籠罩的黑紅色，空氣中沒有氧氣，充滿了令人窒息的二氧化碳與氮氣。最可怕的是，當時的太陽系還很年輕，太空中充滿了失控的小行星，地球每天都在承受「重轟炸」（Heavy Bombardment），每顆撞擊地球的隕石都像核彈一樣，激起千米高的岩漿巨浪。
