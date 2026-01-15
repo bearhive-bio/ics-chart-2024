@@ -1388,6 +1388,9 @@ const SmartImage: React.FC<SmartImageProps> = ({ src, alt, className, fallbackCo
   const [error, setError] = useState(false);
   const imagePath = `/images/${src}`;
 
+  // 明確定義 object-fit 的 class
+  const fitClass = objectFit === 'contain' ? 'object-contain' : 'object-cover';
+
   if (error) {
     let Icon: React.ElementType = ImageIcon;
     if (type === 'extinction') Icon = AlertTriangle;
@@ -1409,7 +1412,8 @@ const SmartImage: React.FC<SmartImageProps> = ({ src, alt, className, fallbackCo
     <img 
       src={imagePath} 
       alt={alt} 
-      className={`${className} object-${objectFit}`}
+      // 這裡直接使用 fitClass 變數
+      className={`${className} ${fitClass}`}
       onError={() => setError(true)}
     />
   );
@@ -1601,7 +1605,6 @@ const DetailPanel: React.FC<DetailPanelProps> = ({ unit, onClose, onNavigate }) 
                 
                 {/* 2-A. Description */}
                 <div className="flex-1 overflow-y-auto p-5 border-b-4 border-gray-100 relative">
-                    {/* [修正] 移除 sticky top-0，改為一般 div，現在它會跟著文字一起捲動 */}
                     <div className="pb-2 mb-2 border-b border-dashed border-gray-100 flex items-center gap-2 text-gray-400">
                         <BookOpen size={14}/> 
                         <span className="text-xs font-bold uppercase tracking-wider">{(isExtinction || isExplosion) ? '事件描述' : '時期特徵'}</span>
@@ -1614,7 +1617,6 @@ const DetailPanel: React.FC<DetailPanelProps> = ({ unit, onClose, onNavigate }) 
                 {/* 2-B. Children List */}
                 {unit.children && unit.children.length > 0 ? (
                     <div className="flex-1 overflow-y-auto p-5 bg-gray-50 relative">
-                        {/* [修正] 移除 sticky top-0，讓列表標題也跟著一起捲動 */}
                         <div className="pb-2 mb-4 border-b border-dashed border-gray-200 flex items-center justify-between text-gray-400">
                            <div className="flex items-center gap-2">
                               <Layers size={14} />
