@@ -1270,7 +1270,7 @@ const geologicalData: GeologicalNode[] = [
            </span>
           </>
         ),
-        image: 'ediacaran.jpg',
+        image: 'Ediacaran.jpg',
         children: [
           {
             type: 'explosion',
